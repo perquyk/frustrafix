@@ -1,0 +1,2 @@
+Bart Devroey
+Deze plugin is ontworpen om meer dan duizend medewerkers te ondersteunen door hen in staat te stellen snelkoppelingen te maken binnen externe tools. De functionaliteit van de plugin wordt geactiveerd zodra medewerkers verbinding maken met het bedrijfs-VPN, waardoor een veilige en geautoriseerde toegang wordt gewaarborgd. Het doel is om taken binnen de externe tools te stroomlijnen en de efficiëntie van de workflow van medewerkers te verbeteren.

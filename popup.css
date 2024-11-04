@@ -1,0 +1,102 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #1e1e2f;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 15px;
+  width: 450px; /* Increased width to accommodate buttons */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+#queryInput {
+  flex-grow: 2; /* Adjusted to allow more space for buttons */
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  background-color: #2a2d3e;
+  color: #e0e0e0;
+  outline: none;
+}
+
+.button-group {
+  display: flex;
+  gap: 5px;
+}
+
+.action-button {
+  background-color: #3a3f58;
+  color: #ffffff;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  flex-shrink: 0; /* Prevents buttons from resizing */
+  transition: background-color 0.3s;
+}
+
+.action-button:hover {
+  background-color: #50597b;
+}
+
+.columns-container {
+  display: flex;
+  gap: 10px;
+}
+
+.column {
+  flex: 1;
+  background-color: #2a2d3e;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.shortcuts-column a {
+  display: block;
+  margin-bottom: 8px;
+  color: #e0e0e0;
+  text-decoration: none;
+  background-color: #3a3f58;
+  padding: 8px;
+  border-radius: 6px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.shortcuts-column a:hover {
+  background-color: #50597b;
+}
+
+.history-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.history-column h4 {
+  margin-bottom: 10px;
+}
+
+#historyList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#historyList li {
+  margin-bottom: 8px;
+  padding: 8px;
+  background-color: #3a3f58;
+  border-radius: 6px;
+}
+#historyList li:hover {
+  cursor: pointer;
+  background-color: #50597b; /* Darker color on hover */
+}
+

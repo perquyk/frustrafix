@@ -11,7 +11,7 @@ if(document.location.host == sfx){
     let antsURL = "http://ants.inet.telenet.be/tools/modems/modemtest#modem=";
     let spotURL = "https://spot.prd.apps.telenet.be/care/customer/";
     let nodeURL = "https://spot.prd.apps.telenet.be/care/network/";
-    let streetURL = "http://ants.inet.telenet.be/tools/nodes/nodeping#node-input=";
+    let streetURL = "http://ants.inet.telenet.be/tools/nodes/livenodeping#node-input=";
     let SalesforceURL = "https://telenet.lightning.force.com/lightning/o/TB_WO_WorkOrderLineItem__c/list?filterName=00B2p000009tCxPEAU";
     let gmapsURL = "https://www.google.com/maps/place/";
 

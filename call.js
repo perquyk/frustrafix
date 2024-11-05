@@ -2,7 +2,6 @@ let page = window.location.href;
 if(page == "https://smartfix.unit-t.eu/interventions?" || page == "https://smartfix.unit-t.eu/interventions"){
     //script waits 5 seconds, then runs all this code
     setTimeout(() => {
-        gmapsBtn();
         //selecting ul where 4 buttons are located
         var BtnUL = document.querySelector(".extra-info-tab-buttons.nav.nav-flushed");
         console.log(BtnUL);
@@ -42,7 +41,7 @@ if(page == "https://smartfix.unit-t.eu/interventions?" || page == "https://smart
         //eventlisteners for added buttons
         spotLI.querySelector("button").firstChild.addEventListener("click", spotbtn);
         document.getElementById("antsbtn").addEventListener("click", antsbtn);
-        document.getAnimations("mapli").addEventListener("click", gmapsBtn);
+        document.getElementById("mapbtn").addEventListener("click", gmapsBtn);
 
 
         //functions for added buttons
@@ -67,9 +66,11 @@ if(page == "https://smartfix.unit-t.eu/interventions?" || page == "https://smart
 
         function gmapsBtn(){
             var address = document.querySelector("address");
+            var url = "https://maps.google.com/?q=";
             console.log(address);
-            
-
+            if(address !== null){
+                window.open(url + address.innerText , "_blank");
+            }
         }
     }, 5000);
 }

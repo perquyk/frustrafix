@@ -2,7 +2,7 @@ let page = window.location.href;
 if(page == "https://smartfix.unit-t.eu/interventions?" || page == "https://smartfix.unit-t.eu/interventions"){
     //script waits 5 seconds, then runs all this code
     setTimeout(() => {
-        addInfo();
+        gmapsBtn();
         //selecting ul where 4 buttons are located
         var BtnUL = document.querySelector(".extra-info-tab-buttons.nav.nav-flushed");
         console.log(BtnUL);
@@ -16,7 +16,7 @@ if(page == "https://smartfix.unit-t.eu/interventions?" || page == "https://smart
         var contactLI = btnQuerySelector[1];
         var productLI = btnQuerySelector[2];
         var moreinfoLI = btnQuerySelector[3];
-
+        
         //add a listitem to the UL for SPOT
         var spotLI = document.createElement("li");
         spotLI.className = "nav-item";
@@ -31,9 +31,18 @@ if(page == "https://smartfix.unit-t.eu/interventions?" || page == "https://smart
         BtnUL.appendChild(spotLI);
         BtnUL.appendChild(antsli);
 
+        //maps
+        var mapli = document.createElement('li');
+        mapli.className = "nav-item";
+        mapli.role = "presentation";
+        mapli.innerHTML = '<button type="button" id="extra-info-tabs-tab-5" role="tab" data-rr-ui-event-key="5" aria-controls="extra-info-tabs-tabpane-5" aria-selected="true" class="nav-link active"><button class="btn extra-info-active-tab d-flex align-items-center" id="intervention-tab" style="transition: transform 0.25s ease 0s;"><span class="mx-2">Google Maps</span></button></button>';
+        mapli.id = "mapbtn";
+        BtnUL.appendChild(mapli);
+
         //eventlisteners for added buttons
         spotLI.querySelector("button").firstChild.addEventListener("click", spotbtn);
         document.getElementById("antsbtn").addEventListener("click", antsbtn);
+        document.getAnimations("mapli").addEventListener("click", gmapsBtn);
 
 
         //functions for added buttons
@@ -55,40 +64,12 @@ if(page == "https://smartfix.unit-t.eu/interventions?" || page == "https://smart
             window.open(url + klantnr, "_blank")
         }
 
-        function addInfo(){
-            var div = document.querySelector(".dayplanning-chip.dayplanning-meeting-type.dayplanning-br.badge.rounded-pill.bg-none").parentNode;
-            var TS = document.createElement("span");
-            TS.className = "dayplanning-chip dayplanning-br badge rounded-pill";
-            TS.style.background = checkTScolor();
-            TS.innerText = checkTS();
-            div.appendChild(TS);
-        }
 
-        function checkTS(){
-            var TS = document.querySelector(".timeslot");
-            if(TS == null){
-                var TS = "";
-            }else{
-                var TS = TS.innerText; 
-            }
-            return TS;
-        }
-        function checkTScolor(){
-            var TS = checkTS();
-            var TScolor;
-            switch(TS){
-                case 'Day': 
-                    var TScolor = "#b77eff";
-                case 'Morning':
-                    var TScolor = "#d4deff";
-                case 'Noon':
-                    var TScolor = "#d3d3d3";
-                case 'Afternoon':
-                    var TScolor = "#ffe1a7";
-                case 'Evening':
-                    var TScolor = "#ffb67a"
-            }
-            return TScolor
+        function gmapsBtn(){
+            var address = document.querySelector("address");
+            console.log(address);
+            
+
         }
     }, 5000);
 }

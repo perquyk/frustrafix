@@ -5,6 +5,10 @@
     "options_page": "options.html",
     "permissions": ["storage"],
 
+    "background": {
+        "service_worker": "background.js"
+      },
+
     "action": {
         "default_popup": "popup.html"
     },
@@ -19,9 +23,5 @@
     "content_scripts": [{
         "matches": ["https://webclient.unit-t.eu/*", "http://ants.inet.telenet.be/*", "https://smartfix.unit-t.eu/*"],
         "js": ["SFX.js","SFXmenu.js", "call.js", "antscopy.js"]
-    }],
-
-    "background": {
-        "service-worker": "background.js"
-    }
+    }]
 }

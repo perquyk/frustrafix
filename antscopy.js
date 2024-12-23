@@ -267,8 +267,8 @@ function modemtest(){
         }
         function getipv4wan(){
             var vlan = false;
-            console.log(document.getElementById('tab-status').querySelectorAll('tr')[16].querySelector('th').innerText);
-            if(document.getElementById('tab-status').querySelectorAll('tr')[16].querySelector('th').innerText === "VLAN"){
+            console.log(document.getElementById('tab-status').querySelectorAll('tr')[17].querySelector('th').innerText);
+            if(document.getElementById('tab-status').querySelectorAll('tr')[17].querySelector('th').innerText === "VLAN"){
                 vlan = true;
                
             }
@@ -282,7 +282,7 @@ function modemtest(){
         }
         function getipv6wan(){
             var vlan = false;
-            if(document.getElementById('tab-status').querySelectorAll('tr')[16].querySelector('th').innerText === "VLAN"){
+            if(document.getElementById('tab-status').querySelectorAll('tr')[17].querySelector('th').innerText === "VLAN"){
                 var ipv6wan = "";
             }else{
                 var ipv6wan = hgwTab.querySelectorAll('td')[3].innerText;

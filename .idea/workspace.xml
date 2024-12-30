@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbb9646e-905c-41ad-a749-598292960a87" name="Changes" comment="adjusted query select number" />
+    <list default="true" id="cbb9646e-905c-41ad-a749-598292960a87" name="Changes" comment="version number change" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,22 +13,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "perquyk"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;perquyk&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/perquyk/frustrafix.git",
-    "accountId": "6201982b-4d96-432f-8079-1715a5448a08"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/perquyk/frustrafix.git&quot;,
+    &quot;accountId&quot;: &quot;6201982b-4d96-432f-8079-1715a5448a08&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 6
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2qc42oIKeAUgOjp7qucWSTE6NOE" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -38,7 +38,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "vlan-fix",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -63,6 +63,7 @@
       <option name="presentableId" value="Default" />
       <updated>1734948325908</updated>
       <workItem from="1734948327467" duration="379000" />
+      <workItem from="1734948798023" duration="48000" />
     </task>
     <task id="LOCAL-00001" summary="adjusted query select number">
       <option name="closed" value="true" />
@@ -72,7 +73,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734948702810</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="version number change">
+      <option name="closed" value="true" />
+      <created>1734948840094</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1734948840094</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -80,7 +89,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="adjusted query select number" />
-    <option name="LAST_COMMIT_MESSAGE" value="adjusted query select number" />
+    <MESSAGE value="version number change" />
+    <option name="LAST_COMMIT_MESSAGE" value="version number change" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -88,7 +98,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/antscopy.js</url>
           <line>39</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

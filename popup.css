@@ -74,29 +74,3 @@ body {
   background-color: #50597b;
 }
 
-.history-column {
-  display: flex;
-  flex-direction: column;
-}
-
-.history-column h4 {
-  margin-bottom: 10px;
-}
-
-#historyList {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#historyList li {
-  margin-bottom: 8px;
-  padding: 8px;
-  background-color: #3a3f58;
-  border-radius: 6px;
-}
-#historyList li:hover {
-  cursor: pointer;
-  background-color: #50597b; /* Darker color on hover */
-}
-

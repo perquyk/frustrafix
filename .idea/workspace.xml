@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbb9646e-905c-41ad-a749-598292960a87" name="Changes" comment="version number change" />
+    <list default="true" id="cbb9646e-905c-41ad-a749-598292960a87" name="Changes" comment="removed unneeded stuff in call.js and renamed file to be clearer of function" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -30,6 +35,9 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2qc42oIKeAUgOjp7qucWSTE6NOE" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -38,7 +46,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "FF-9-remove-extra-sidebar-buttons",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -65,7 +73,7 @@
       <updated>1734948325908</updated>
       <workItem from="1734948327467" duration="379000" />
       <workItem from="1734948798023" duration="48000" />
-      <workItem from="1736894990892" duration="17000" />
+      <workItem from="1736894990892" duration="2788000" />
     </task>
     <task id="LOCAL-00001" summary="adjusted query select number">
       <option name="closed" value="true" />
@@ -83,7 +91,39 @@
       <option name="project" value="LOCAL" />
       <updated>1734948840094</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="version number change">
+      <option name="closed" value="true" />
+      <created>1736895188984</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1736895188984</updated>
+    </task>
+    <task id="LOCAL-00004" summary="version number change">
+      <option name="closed" value="true" />
+      <created>1736895240185</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1736895240185</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added dayplanning.js for plans to remove call.js after refactoring">
+      <option name="closed" value="true" />
+      <created>1736895328408</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1736895328408</updated>
+    </task>
+    <task id="LOCAL-00006" summary="removed unneeded stuff in call.js and renamed file to be clearer of function">
+      <option name="closed" value="true" />
+      <created>1736897776483</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1736897776483</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,7 +132,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="adjusted query select number" />
     <MESSAGE value="version number change" />
-    <option name="LAST_COMMIT_MESSAGE" value="version number change" />
+    <MESSAGE value="added dayplanning.js for plans to remove call.js after refactoring" />
+    <MESSAGE value="removed unneeded stuff in call.js and renamed file to be clearer of function" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed unneeded stuff in call.js and renamed file to be clearer of function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "FrustraFix",
-  "version": "3.0.3",
+  "version": "3.1.0",
   "options_page": "options.html",
   "permissions": ["storage"],
 
@@ -27,7 +27,7 @@
         "http://ants.inet.telenet.be/*",
         "https://smartfix.unit-t.eu/*"
       ],
-      "js": ["SFX.js", "SFXmenu.js", "call.js", "antscopy.js"]
+      "js": ["SFX.js", "dayplanning.js", "antscopy.js"]
     }
   ]
 }

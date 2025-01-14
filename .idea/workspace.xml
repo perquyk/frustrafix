@@ -44,6 +44,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -64,6 +65,7 @@
       <updated>1734948325908</updated>
       <workItem from="1734948327467" duration="379000" />
       <workItem from="1734948798023" duration="48000" />
+      <workItem from="1736894990892" duration="17000" />
     </task>
     <task id="LOCAL-00001" summary="adjusted query select number">
       <option name="closed" value="true" />
@@ -97,7 +99,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/antscopy.js</url>
-          <line>39</line>
+          <line>34</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbb9646e-905c-41ad-a749-598292960a87" name="Changes" comment="added dayplanning.js for plans to remove call.js after refactoring">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/call.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dayplanning.js" beforeDir="false" afterPath="$PROJECT_DIR$/dayplanning.js" afterDir="false" />
-    </list>
+    <list default="true" id="cbb9646e-905c-41ad-a749-598292960a87" name="Changes" comment="removed unneeded stuff in call.js and renamed file to be clearer of function" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,7 +73,7 @@
       <updated>1734948325908</updated>
       <workItem from="1734948327467" duration="379000" />
       <workItem from="1734948798023" duration="48000" />
-      <workItem from="1736894990892" duration="2228000" />
+      <workItem from="1736894990892" duration="2788000" />
     </task>
     <task id="LOCAL-00001" summary="adjusted query select number">
       <option name="closed" value="true" />
@@ -119,7 +115,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736895328408</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="removed unneeded stuff in call.js and renamed file to be clearer of function">
+      <option name="closed" value="true" />
+      <created>1736897776483</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1736897776483</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,7 +133,8 @@
     <MESSAGE value="adjusted query select number" />
     <MESSAGE value="version number change" />
     <MESSAGE value="added dayplanning.js for plans to remove call.js after refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="added dayplanning.js for plans to remove call.js after refactoring" />
+    <MESSAGE value="removed unneeded stuff in call.js and renamed file to be clearer of function" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed unneeded stuff in call.js and renamed file to be clearer of function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

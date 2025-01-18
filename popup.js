@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
           newItem.textContent = `${button.textContent}: ${query}`;
           newItem.classList.add('history-item');
           newItem.dataset.query = query;
-          historyList.appendChild(newItem);
   
           // Add click event to the new history item
           newItem.addEventListener('click', () => {

@@ -1,4 +1,4 @@
-//checks if options is checked, if enabled, call function, if not enabeled, do nothing. pretty simple.
+//checks if options is checked, if enabled, call function, if not enabled, do nothing. pretty simple.
 var antpage = document.URL;
 if (
   antpage.substring(0, 50) ===

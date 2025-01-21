@@ -27,7 +27,7 @@ if(page == "https://smartfix.unit-t.eu/interventions?" || page == "https://smart
         //eventlisteners for added buttons
         spotLI.querySelector("button").firstChild.addEventListener("click", spotbtn);
         document.getElementById("antsbtn").addEventListener("click", antsbtn);
-        document.getElementById("mapbtn").addEventListener("click", gmapsBtn);
+
 
 
         //functions for added buttons

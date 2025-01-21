@@ -27,7 +27,7 @@
         "http://ants.inet.telenet.be/*",
         "https://smartfix.unit-t.eu/*"
       ],
-      "js": ["SFX.js", "dayplanning.js", "antscopy.js"]
+      "js": ["SFX.js", "dayplanning.js", "antscopy.js", "home.js"]
     }
   ]
 }

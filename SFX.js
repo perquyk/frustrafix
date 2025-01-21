@@ -124,8 +124,6 @@ if(document.location.host == sfx){
                 navbarPerform();
 
                 break;
-            case "WC: Display":
-                homelinks();
             default:
                 break;
         }
@@ -324,24 +322,6 @@ if(document.location.host == sfx){
         function sosbtn(){
             window.open("https://chat.whatsapp.com/Iw3a32964UbIAgqSovHfv6", "_blank");
         }
-    }
-    function homelinks(){
-
-        //verwijder die "successfully logged in" zever op homepage
-        document.querySelector(".note.note-success").remove();
-        
-        console.log("homepage loaded! >>> running homelinks()");
-        console.log("selecting content div");
-        let Selecteddiv = document.querySelector(".page-inner-wrapper");
-        console.log(Selecteddiv);
-        
-        //add alle toevoegingen
-
-        var testText = document.createElement("h1");
-        testText.innerText = "Frustrafix is geladen met alle gevolgen van dien.";
-
-        //append alles onder selecteddiv var
-        Selecteddiv.prepend(testText);
     }
     function removestuff(){
         document.getElementById("spare-parts-list-trigger").remove();

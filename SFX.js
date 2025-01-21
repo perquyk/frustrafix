@@ -145,15 +145,6 @@ if(document.location.host == sfx){
         let planbtn = document.createElement("li");
         planbtn.innerHTML = "<a href='#' id='planbtn'style='color: #e46262;'><strong>Full Planning</strong></a>";
 
-        //soskenny
-        let sosknop = document.createElement("li");
-        sosknop.innerHTML = "<a href='#' id='planbtn'style='color: #e46262;'><strong>SOS Kenny</strong></a>"
-        //append all buttons
-        navbar.appendChild(spotnav);
-        navbar.appendChild(antsnav);
-        //navbar.appendChild(planbtn);
-        navbar.appendChild(sosknop);
-
         //eventlisteners
         spotnav.addEventListener("click", navbarLSPOT);
         antsnav.addEventListener("click", navbarLANTS);

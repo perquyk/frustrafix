@@ -10,7 +10,7 @@ chrome.storage.sync.get("favicon", (data) => {
 
 function changeFavicon() {
     const site = document.location.host;
-    if(site === 'webclient.unit-t.eu' || 'smartfix.unit-t.eu'){
+    if(site === 'webclient.unit-t.eu' || site === 'smartfix.unit-t.eu'){
         const head = document.head
 
         const icon = document.createElement("link");

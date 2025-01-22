@@ -147,7 +147,7 @@ if(document.location.host == sfx){
         spotnav.addEventListener("click", navbarLSPOT);
         antsnav.addEventListener("click", navbarLANTS);
         planbtn.addEventListener("click", navbarLPLAN);
-        sosknop.addEventListener("click", soskenny);
+
 
         function navbarLSPOT(){
             window.open(spotURL + klantnr, "_blank");
@@ -158,12 +158,8 @@ if(document.location.host == sfx){
         function navbarLPLAN(){
             window.open("https://webclient.unit-t.eu/workorders/index/mobile", "_blank");
         }
-        function soskenny(){
-            window.open("https://wa.me/+32471562237", "_blank");
-        }
-        function soskennygroup(){
-            window.open("https://chat.whatsapp.com/Iw3a32964UbIAgqSovHfv6", "_blank");
-        }
+
+
     }
     function navbarButtonsR(){
         //WIP
@@ -255,14 +251,10 @@ if(document.location.host == sfx){
         sap.style.float = "left";
         sap.style.marginLeft = "10px"
         sap.innerHTML = "<button class='btn dark' id='stock' style='border: 0px;padding: 11px 14px;'>Check SAP-ID</button>";
-        //sos
-        let sos = document.createElement("div");
-        sos.style.float = "left";
-        sos.style.marginLeft = "10px";
-        sos.innerHTML = "<button class='btn dark' id='stock' style='border: 0px;padding: 11px 14px;'>SOS Kenny</button>";
+
 
         //appends
-        navbar.appendChild(sos);
+
         navbar.appendChild(customer);
         navbar.appendChild(ants);
         navbar.appendChild(spot);
@@ -272,7 +264,7 @@ if(document.location.host == sfx){
         navbar.appendChild(sap);
 
         //eventlistenener
-        sos.addEventListener("click", sosbtn);
+
         customer.addEventListener("click", customerbtn);
         ants.addEventListener("click", antsbtn);
         spot.addEventListener("click", spotbtn);
@@ -319,9 +311,7 @@ if(document.location.host == sfx){
             let sapid = document.querySelector("#sapid").textContent;
             sap.innerHTML = "<button class='btn dark' id='stock' style='border: 0px;padding: 11px 14px;'>SAP: "+ sapid +"</button>";
         }
-        function sosbtn(){
-            window.open("https://chat.whatsapp.com/Iw3a32964UbIAgqSovHfv6", "_blank");
-        }
+
     }
     function removestuff(){
         document.getElementById("spare-parts-list-trigger").remove();

@@ -30,6 +30,10 @@ if(currentSite === smartfix){
             dagplanning.id = "dagplanningBtn";
             dagplanning.prepend(dagplanningIcon);
 
+            //dagplanning icon
+            dagplanningIcon.classList.add("fa");
+            dagplanningIcon.classList.add("fa-calendar");
+
 
             const entviewer = document.createElement("button");
             const entviewerIcon = document.createElement("i");

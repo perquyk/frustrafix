@@ -18,6 +18,8 @@ if(currentSite === smartfix){
             const buttonFlex = document.createElement("div");
             buttonFlex.style.display = "flex";
             buttonFlex.style.gap = "8px";
+            buttonFlex.style.marginTop = "8px";
+            buttonFlex.style.martinBottom = "8px";
 
             const dagplanning = document.createElement("button");
             const dagplanningIcon = document.createElement("i");
@@ -68,7 +70,7 @@ if(currentSite === smartfix){
             buttonFlex.appendChild(dagplanning);
             buttonFlex.appendChild(entviewer);
             buttonFlex.appendChild(stock)
-            target.appendChild(buttonFlex);
+            target.prepend(buttonFlex);
 
             //add eventListeners
             document.getElementById("dagplanningBtn").addEventListener("click", dagplanningBtn);
@@ -116,6 +118,8 @@ if(currentSite === webclient || currentSite === "https://webclient.unit-t.eu/pag
                 const buttonFlex = document.createElement("div");
                 buttonFlex.style.display = "flex";
                 buttonFlex.style.gap = "5px";
+                buttonFlex.style.marginTop = "8px";
+                buttonFlex.style.marginBottom = "8px";
 
                 //dagplanning button
                 const dagplanning = document.createElement("button");
@@ -172,7 +176,7 @@ if(currentSite === webclient || currentSite === "https://webclient.unit-t.eu/pag
                 buttonFlex.appendChild(stock);
 
                 //append grid to rootDiv
-                rootDiv.appendChild(buttonFlex);
+                rootDiv.prepend(buttonFlex);
                 console.log(rootDiv);
 
                 //add eventListeners

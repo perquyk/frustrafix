@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('favicon').checked = data.favicon || false;
         document.getElementById('businesstech').checked = data.favicon || true;
         document.getElementById('feature2').checked = data.feature2 || false;
+
       }
     });
   

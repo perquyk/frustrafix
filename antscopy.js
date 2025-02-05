@@ -6,17 +6,14 @@ if (
 ) {
   chrome.storage.sync.get("antscopy", (data) => {
     if (data.antscopy) {
+      console.log("option: OK")
       modemtest();
-    } else {
-      console.log(
-        "antscopy has been disabled in options. To use the Antscopy functionality from frustrafix, please go to options and enable the switch."
-      );
     }
   });
 
   function modemtest() {
-    //declare modem input field and checks if it's loaded. runs functions when loaded.
-    var modeminput = document.getElementById("modem");
+    // Declare modem input field and checks if it has finished loading. Runs functions when loaded.
+    const modeminput = document.getElementById("modem");
     modeminput.onload = modemtestLoaded();
 
     //functions that runs functions when modeminput has loaded in.
@@ -26,57 +23,31 @@ if (
     }
     //starts modemtest automatically when modeminput has something filled in.
     function emptyCheck() {
+      console.log(modeminput.value);
       if (modeminput.value === "") {
       } else {
+        console.log("modeminput not empty")
         document.getElementById("start-test").click();
       }
     }
     //checks all boxes on pageload
     function boxCheck() {
-      var options = document.getElementById("options");
-      var boxes = options.querySelectorAll("input");
-      var box1 = boxes[0];
-      var box2 = boxes[1];
-      var box3 = boxes[2];
-      var box4 = boxes[3];
-      var box5 = boxes[4];
-      var box6 = boxes[5];
-      var box7 = boxes[6];
-      //checkign all boxes in background
-      box1.checked = "checked";
-      box2.checked = "checked";
-      box3.checked = "checked";
-      box4.checked = "checked";
-      box5.checked = "checked";
-      box6.checked = "checked";
-      box7.checked = "checked";
-      //checking all boxes in foreground (visually)
-      var labels = options.querySelectorAll("label");
-      var label1 = labels[0];
-      var label2 = labels[1];
-      var label3 = labels[2];
-      var label4 = labels[3];
-      var label5 = labels[4];
-      var label6 = labels[5];
-      var label7 = labels[6];
-      label1.className =
-        "toggle-button toggle-check ui-button ui-widget ui-state-default ui-button-text-only ui-state-active";
-      label2.className =
-        "toggle-button toggle-check ui-button ui-widget ui-state-default ui-button-text-only ui-state-active";
-      label3.className =
-        "toggle-button toggle-check ui-button ui-widget ui-state-default ui-button-text-only ui-state-active";
-      label4.className =
-        "toggle-button toggle-check ui-button ui-widget ui-state-default ui-button-text-only ui-state-active";
-      label5.className =
-        "toggle-button toggle-check ui-button ui-widget ui-state-default ui-button-text-only ui-state-active";
-      label6.className =
-        "toggle-button toggle-check ui-button ui-widget ui-state-default ui-button-text-only ui-state-active";
-      label7.className =
-        "toggle-button toggle-check ui-button ui-widget ui-state-default ui-button-text-only ui-state-active";
+      const options = document.getElementById("options");
+      const boxes = options.querySelectorAll("input");
+      boxes.forEach(function (box) {
+        box.checked = "checked";
+      })
+      const labels = options.querySelectorAll("label");
+      labels.forEach(function (label) {
+        label.className = "toggle-button toggle-check ui-button ui-widget ui-state-default ui-button-text-only ui-state-active";
+      })
     }
     //set trigger location for copy button
     var h1 = document.querySelector("h1");
+    const copyBtn = document.getElementById("copy-helper");
     h1.addEventListener("click", copyhttp);
+
+
 
     function copyhttp() {
       const textArea = document.createElement("textarea");
@@ -105,20 +76,17 @@ if (
       return new Promise((resolve) => setTimeout(resolve, ms));
     }
     function testData() {
-      var outputText = "";
+
       //var for each div of tab
-      var statusTab = document.getElementById("tab-status");
-      var cmTab = document.getElementById("tab-cm");
-      var mtaTab = document.getElementById("tab-mta");
-      var hgwTab = document.getElementById("tab-hgw");
-      var wifiTab = document.getElementById("tab-wifi");
-      var cpeTab = document.getElementById("tab-host");
-      var dsTab = document.getElementById("tab-ds");
-      var usTab = document.getElementById("tab-us");
-      var configTab = document.getElementById("tab-config");
-      var cmtsTab = document.getElementById("tab-cmts");
-      var ofdmTab = document.getElementById("tab-ofdm");
-      var ofdmaTab = document.getElementById("tab-ofdma");
+      const statusTab = document.getElementById("tab-status");
+      const cmTab = document.getElementById("tab-cm");
+      const hgwTab = document.getElementById("tab-hgw");
+      const dsTab = document.getElementById("tab-ds");
+      const usTab = document.getElementById("tab-us");
+      const configTab = document.getElementById("tab-config");
+      const cmtsTab = document.getElementById("tab-cmts");
+      const ofdmTab = document.getElementById("tab-ofdm");
+      const ofdmaTab = document.getElementById("tab-ofdma");
       //var Tab = document.getElementById('tab-');
       function getDSfreq() {
         var freq = "";
@@ -273,12 +241,14 @@ if (
           .querySelectorAll("tr");
         array.forEach((item) => {
           let text = item.querySelector("th").innerText;
-          if (text == "VLAN") {
+          if (text === "VLAN") {
             vlan++;
           }
         });
-        return vlan > 0 ? true : false;
+        return vlan > 0;
       }
+
+
 
       const testData = {
         mac: cmTab.querySelectorAll("td")[0].innerText,

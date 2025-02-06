@@ -118,13 +118,13 @@ stbDiv.appendChild(stbButtonDiv);
 
 const HDDB = document.createElement("button");
 HDDB.className = "btn btn-sm";
-HDDB.innerText = "HDDB";
-HDDB.id = "HD DigiBox";
+HDDB.innerText = "HD Digibox";
+HDDB.id = "HDDB";
 
 const HDDC = document.createElement("button");
 HDDC.className = "btn btn-sm";
-HDDC.innerText = "HDDC";
-HDDC.id = "HD DigiCorder";
+HDDC.innerText = "HD Digicorder";
+HDDC.id = "HDDC";
 
 const EOSv2 = document.createElement("button");
 EOSv2.className = "btn btn-sm";
@@ -288,7 +288,7 @@ function addItem(e){
   productSelect.value = productInput;
   qtySelect.value = quantity;
   statusSelect.value = status;
-  addButton.click()
+  addButton.dispatchEvent(new Event('click', {bubbles: true}));
 
   console.log("Chosen product: " + productInput);
   console.log("Chosen Qty: " + quantity);

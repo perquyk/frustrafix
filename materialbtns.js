@@ -119,12 +119,12 @@ stbDiv.appendChild(stbButtonDiv);
 const HDDB = document.createElement("button");
 HDDB.className = "btn btn-sm";
 HDDB.innerText = "HDDB";
-HDDB.id = "HDDB";
+HDDB.id = "HD DigiBox";
 
 const HDDC = document.createElement("button");
 HDDC.className = "btn btn-sm";
 HDDC.innerText = "HDDC";
-HDDC.id = "HDDC";
+HDDC.id = "HD DigiCorder";
 
 const EOSv2 = document.createElement("button");
 EOSv2.className = "btn btn-sm";
@@ -214,56 +214,56 @@ function addItem(e){
 
  switch(e.currentTarget.id){
   case 'modemMarakele':
-   productInput = "Compal Marakele CV8560E - 2063183"
+   productInput = "2075"
    break;
   case 'modemFast':
-   productInput = "MODEM - D3.1 MV2+ - FAST3896 LG TN - 2108285"
+   productInput = "4418"
    break;
   case 'modemMv2':
-   productInput = "MODEM - D3.1 HGW - CBN CH8568LG - 2063101"
+   productInput = "2368"
    break;
   case 'modemMerc':
-   productInput = "CBN 24 * 8 DOC 3 Wireless - 2037950"
+   productInput = "1596"
    break;
   case '2CM85':
-   productInput = "Mampaey-NIU-85/105-Versterker Garage 85MHz-2CM+lifeline-3300418"
+   productInput = "6380"
    break;
   case 'WO85':
-   productInput = "VERSTERKER -Teleste - NIU-85/105 Wall Outlet - 3300419"
+   productInput = "6147"
    break;
   case '4CM85':
-   productInput = "Teleste-NIU-85/105-Versterker-4CM-85MHz-3300420"
+   productInput = "6148"
    break;
   case '4CM65':
-   productInput = "VERSTERKER - 4 Datapoort NIU 2038506"
+   productInput = "1764"
    break;
   case 'micronode':
-   productInput = "Micronode - 2040397"
+   productInput = "5049"
    break;
   case 'Apollo':
    multiLine = true;
-   productInput = ["Apollo V1+ - Telenet TV Box - 2126879", "Apollo V1+ Cable Kit - 3300323", "Apollo V1 + - REMOTE - 3300198"]
-   quantity = window.prompt("Please enter desired qty: ", "1")
+   productInput = ["6381", "6382", "6383"]
+   quantity = window.prompt("Please enter desired quantity: ", "1")
    break;
   case 'EOSv2':
    multiLine = true;
-   productInput = ["EOS Cablekit - 2038357", "Remote Telenet TV Box V2 - 2089380", "Telenet TV Box V2 - 2089381"]
-   quantity = window.prompt("Please enter desired qty: ", "1")
+   productInput = ["3222", "3223", "1796"]
+   quantity = window.prompt("Please enter desired quantity: ", "1")
    break;
   case 'HDDB':
-   productInput = "B-Kit HD Digibox 1750 - AD220 - 2041233"
-   quantity = window.prompt("Please enter desired qty: ", "1")
+   productInput = "2408"
+   quantity = window.prompt("Please enter desired quantity: ", "1")
    break;
   case 'HDDC':
-   productInput = "B-KIT HD Digicorder 5744 - AD2200 - 2041321"
-   quantity = window.prompt("Please enter desired qty: ", "1")
+   productInput = "1607"
+   quantity = window.prompt("Please enter desired quantity: ", "1")
    break;
   case 'pod':
-   productInput = "SuperPod Wifi 6 - 2109180"
-   quantity = window.prompt("Please enter desired qty: ", "1")
+   productInput = "5340"
+   quantity = window.prompt("Please enter desired quantity: ", "1")
    break;
   case 'zte':
-   productInput = "LTE Modem MF281-White - 2110080"
+   productInput = "5181"
    break;
  }
 

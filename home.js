@@ -5,7 +5,7 @@ const entityViewerUrl = "https://smartfix.unit-t.eu/tasks";
 const stockUrl = "https://webclient.unit-t.eu/warehouses/overview"
 const currentSite = document.location.host;
 
-if(currentSite === smartfix){
+if(currentSite === smartfix && window.location.href == "https://smartfix.unit-t.eu/"){
     setTimeout(() => {
         //select target and remove unneeded elements.
         if(window.location.href.substring(0,"https://webclient.unit-t.eu/service".length) !== "https://webclient.unit-t.eu/service"){
@@ -91,7 +91,6 @@ if(currentSite === smartfix){
             }
         }
     }, 1000)
-
 }
 if(currentSite === webclient || currentSite === "https://webclient.unit-t.eu/pages/home/?sopReferrer=interventions&sopLang=en_US"){
         console.log("webclient has loaded. :)")

@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbb9646e-905c-41ad-a749-598292960a87" name="Changes" comment="''" />
+    <list default="true" id="cbb9646e-905c-41ad-a749-598292960a87" name="Changes" comment="added entity viewer and stock button to dayplanning">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dayplanning.js" beforeDir="false" afterPath="$PROJECT_DIR$/dayplanning.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/manifest.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,7 +98,7 @@
       <workItem from="1738884170870" duration="2088000" />
       <workItem from="1738886906735" duration="9000" />
       <workItem from="1738939092952" duration="478000" />
-      <workItem from="1738939585494" duration="1141000" />
+      <workItem from="1738939585494" duration="3324000" />
     </task>
     <task id="LOCAL-00001" summary="adjusted query select number">
       <option name="closed" value="true" />
@@ -303,7 +308,31 @@
       <option name="project" value="LOCAL" />
       <updated>1738939661278</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="fixed the kit-bug. hotfix 3.3.4">
+      <option name="closed" value="true" />
+      <created>1738945211713</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1738945211713</updated>
+    </task>
+    <task id="LOCAL-00028" summary="updated version number">
+      <option name="closed" value="true" />
+      <created>1738945373980</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1738945373980</updated>
+    </task>
+    <task id="LOCAL-00029" summary="updated bug disclaimer for materialbuttons">
+      <option name="closed" value="true" />
+      <created>1738945395004</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1738945395004</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,7 +348,6 @@
     <MESSAGE value="removed sos kenny button" />
     <MESSAGE value="Added buttons to the index pages." />
     <MESSAGE value="corrected if statement" />
-    <MESSAGE value="updated version number" />
     <MESSAGE value="added check for eKC so h1 is not deleted there." />
     <MESSAGE value="removed all mentions of soskenny" />
     <MESSAGE value="added icon to sfx home.js" />
@@ -331,6 +359,10 @@
     <MESSAGE value="removed .click() and added dispatchevent instead." />
     <MESSAGE value="changed version" />
     <MESSAGE value="''" />
-    <option name="LAST_COMMIT_MESSAGE" value="''" />
+    <MESSAGE value="fixed the kit-bug. hotfix 3.3.4" />
+    <MESSAGE value="updated version number" />
+    <MESSAGE value="updated bug disclaimer for materialbuttons" />
+    <MESSAGE value="added entity viewer and stock button to dayplanning" />
+    <option name="LAST_COMMIT_MESSAGE" value="added entity viewer and stock button to dayplanning" />
   </component>
 </project>

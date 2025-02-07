@@ -2,6 +2,40 @@ let page = window.location.href;
 if(page == "https://smartfix.unit-t.eu/interventions?" || page == "https://smartfix.unit-t.eu/interventions"){
     //script waits 5 seconds, then runs all this code
     setTimeout(() => {
+        //add buttons to navbar in dayplanning to go to entity viewer and stock overview
+        const header = document.querySelector("#kt_header_menu");
+        const navbar = header.querySelector(".menu-nav");
+
+        //stockbutton
+        const stockli = document.createElement("li")
+        stockli.className = "menu-item"
+        const stockBtn = document.createElement("btn");
+        stockli.appendChild(stockBtn);
+        stockBtn.textContent = "Warehouse Overview"
+        stockBtn.className= "btn-primary btn"
+
+        //entity viewer button
+        const entityViewerli = document.createElement("li")
+        entityViewerli.className = "menu-item"
+        const entityViewerBtn = document.createElement("btn");
+        entityViewerli.appendChild(entityViewerBtn);
+        entityViewerBtn.textContent = "Entity Viewer"
+        entityViewerBtn.className= "btn-primary btn"
+
+
+        navbar.appendChild(stockli);
+        navbar.appendChild(entityViewerli);
+
+        stockBtn.addEventListener("click", function(){
+            window.open("https://webclient.unit-t.eu/warehouses/overview/?sopReferrer=interventions&sopLang=en_US", "_self")
+        })
+        entityViewerli.addEventListener("click", function(){
+            window.open("https://smartfix.unit-t.eu/tasks?", "_self")
+        })
+
+        console.log(navbar);
+    },500)
+    setTimeout(() => {
         //selecting ul where 4 buttons are located
         const BtnUL = document.querySelector(".extra-info-tab-buttons.nav.nav-flushed");
         
@@ -22,13 +56,9 @@ if(page == "https://smartfix.unit-t.eu/interventions?" || page == "https://smart
         BtnUL.appendChild(spotLI);
         BtnUL.appendChild(antsli);
 
-
-
         //eventlisteners for added buttons
         spotLI.querySelector("button").firstChild.addEventListener("click", spotbtn);
         document.getElementById("antsbtn").addEventListener("click", antsbtn);
-
-
 
         //functions for added buttons
         function spotbtn(){
@@ -38,7 +68,6 @@ if(page == "https://smartfix.unit-t.eu/interventions?" || page == "https://smart
             const klantnr = taskgroupID.split("_")[1];
             window.open(url + klantnr, "_blank")
         }
-
         function antsbtn(){
             const url = "http://ants.inet.telenet.be/tools/modems/modemtest#modem=";
             const taskgroupidElement = document.querySelector(".flex-item.dayplanning-chip.dayplanning-taskgroup-name.badge.bg-none");

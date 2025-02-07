@@ -286,8 +286,8 @@ function addItem(e){
  if(Array.isArray(productInput)){
   productInput.forEach((item) => {
    productSelect.value = item;
-   statusSelect.value = item;
-   qtySelect.value = item;
+   statusSelect.value = quantity;
+   qtySelect.value = status;
    addButton.click();
 
    console.log("Chosen product: " + item);

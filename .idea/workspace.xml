@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbb9646e-905c-41ad-a749-598292960a87" name="Changes" comment="changed version">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/materialbtns.js" beforeDir="false" afterPath="$PROJECT_DIR$/materialbtns.js" afterDir="false" />
-    </list>
+    <list default="true" id="cbb9646e-905c-41ad-a749-598292960a87" name="Changes" comment="''" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -97,6 +93,7 @@
       <workItem from="1738884170870" duration="2088000" />
       <workItem from="1738886906735" duration="9000" />
       <workItem from="1738939092952" duration="478000" />
+      <workItem from="1738939585494" duration="1141000" />
     </task>
     <task id="LOCAL-00001" summary="adjusted query select number">
       <option name="closed" value="true" />
@@ -298,7 +295,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738886223405</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="''">
+      <option name="closed" value="true" />
+      <created>1738939661278</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1738939661278</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,6 +330,7 @@
     <MESSAGE value="added value IDs for products" />
     <MESSAGE value="removed .click() and added dispatchevent instead." />
     <MESSAGE value="changed version" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed version" />
+    <MESSAGE value="''" />
+    <option name="LAST_COMMIT_MESSAGE" value="''" />
   </component>
 </project>

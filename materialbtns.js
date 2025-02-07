@@ -13,7 +13,7 @@ const buttonDiv = document.createElement("div");
 buttonDiv.className = "buttonDiv";
 
 const betaDiv = document.createElement("div");
-betaDiv.textContent = "These buttons are still in testing phase and are not guaranteed to work! for more info why they are showing up: contact Kenny :)"
+betaDiv.textContent = "These buttons are still in test phase. you can test them, they SHOULD work but it isn't guaranteed. Please let me (Kenny) know your findings. most efficiently via phone or whatsapp (0471562237) :)\n I would also check my stock if it has really moved until this message has been cleared and the function has launched completely :) Thanks for the help!"
 
 //modems
 const modemDiv = document.createElement("div");

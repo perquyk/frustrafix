@@ -32,22 +32,26 @@ modemDiv.appendChild(modemButtonDiv)
 const buttonFast = document.createElement("button");
 buttonFast.className = "btn btn-sm";
 buttonFast.innerText = "MV2+";
+buttonFast.type = "button";
 buttonFast.id = "modemFast";
 
 
 const buttonMerc = document.createElement("button");
 buttonMerc.innerText = "MV1";
 buttonMerc.className = "btn btn-sm";
+buttonMerc.type = "button";
 buttonMerc.id = "modemMerc";
 
 const buttonMv2 = document.createElement("button");
 buttonMv2.innerText = "MV2";
 buttonMv2.className = "btn btn-sm";
+buttonMv2.type = "button";
 buttonMv2.id = "modemMv2";
 
 const buttonMarakele = document.createElement("button");
 buttonMarakele.className = "btn btn-sm";
 buttonMarakele.innerText = "Marakele";
+buttonMarakele.type = "button";
 buttonMarakele.id = "modemMarakele";
 
 modemButtonDiv.appendChild(buttonMarakele);
@@ -73,26 +77,31 @@ niuDiv.appendChild(niuButtonDiv);
 const mamp2cm85 = document.createElement("button");
 mamp2cm85.className = "btn btn-sm"
 mamp2cm85.innerText = "2CM 85MHz"
+mamp2cm85.type = "button";
 mamp2cm85.id = "2CM85";
 
 const WO85 = document.createElement("button");
 WO85.innerText = "WO 85MHz";
 WO85.className = "btn btn-sm";
+WO85.type = "button";
 WO85.id = "WO85";
 
 const cm4Mhz85 = document.createElement("button");
 cm4Mhz85.innerText = "4CM 85MHz";
 cm4Mhz85.className = "btn btn-sm";
+cm4Mhz85.type = "button";
 cm4Mhz85.id = "4CM85";
 
 const cm4Mhz65 = document.createElement("button");
 cm4Mhz65.className = "btn btn-sm";
 cm4Mhz65.innerText = "4CM 65MHz";
+cm4Mhz65.type = "button";
 cm4Mhz65.id = "4CM65";
 
 const micronode = document.createElement("button");
 micronode.className = "btn btn-sm";
 micronode.innerText = "Micronode";
+micronode.type = "button";
 micronode.id = "micronode";
 
 niuButtonDiv.appendChild(mamp2cm85);
@@ -108,6 +117,7 @@ stbDiv.className = "buttonGroup";
 
 const stbLegendDiv = document.createElement("div");
 stbLegendDiv.className = "buttonGroupLegend";
+
 stbLegendDiv.innerText = "STBs";
 
 const stbButtonDiv = document.createElement("div");
@@ -119,21 +129,25 @@ stbDiv.appendChild(stbButtonDiv);
 const HDDB = document.createElement("button");
 HDDB.className = "btn btn-sm";
 HDDB.innerText = "HD Digibox";
+HDDB.type = "button";
 HDDB.id = "HDDB";
 
 const HDDC = document.createElement("button");
 HDDC.className = "btn btn-sm";
 HDDC.innerText = "HD Digicorder";
+HDDB.type = "button";
 HDDC.id = "HDDC";
 
 const EOSv2 = document.createElement("button");
 EOSv2.className = "btn btn-sm";
 EOSv2.innerText = "EOSv2 Kit";
+EOSv2.type = "button";
 EOSv2.id = "EOSv2";
 
 const Apollo = document.createElement("button");
 Apollo.className = "btn btn-sm";
 Apollo.innerText = "Apollo Kit";
+Apollo.type = "button";
 Apollo.id = "Apollo";
 
 stbButtonDiv.appendChild(Apollo);
@@ -159,11 +173,13 @@ extraDiv.appendChild(extraButtonDiv)
 const zte = document.createElement("button");
 zte.className = "btn btn-sm";
 zte.innerText = "ZTE Modem";
+zte.type = "button";
 zte.id = "zte";
 
 const pod = document.createElement("button");
 pod.className = "btn btn-sm";
 pod.innerText = "360 POD";
+pod.type = "button";
 pod.id = "pod";
 
 extraButtonDiv.appendChild(pod);

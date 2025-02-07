@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbb9646e-905c-41ad-a749-598292960a87" name="Changes" comment="removed .click() and added dispatchevent instead.">
+    <list default="true" id="cbb9646e-905c-41ad-a749-598292960a87" name="Changes" comment="changed version">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/materialbtns.js" beforeDir="false" afterPath="$PROJECT_DIR$/materialbtns.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +94,9 @@
       <workItem from="1738699792823" duration="4193000" />
       <workItem from="1738706089411" duration="5698000" />
       <workItem from="1738783180647" duration="4061000" />
-      <workItem from="1738884170870" duration="1947000" />
+      <workItem from="1738884170870" duration="2088000" />
+      <workItem from="1738886906735" duration="9000" />
+      <workItem from="1738939092952" duration="478000" />
     </task>
     <task id="LOCAL-00001" summary="adjusted query select number">
       <option name="closed" value="true" />
@@ -287,7 +290,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738886140692</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="changed version">
+      <option name="closed" value="true" />
+      <created>1738886223405</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1738886223405</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,6 +324,7 @@
     <MESSAGE value="added testing for materialbtns" />
     <MESSAGE value="added value IDs for products" />
     <MESSAGE value="removed .click() and added dispatchevent instead." />
-    <option name="LAST_COMMIT_MESSAGE" value="removed .click() and added dispatchevent instead." />
+    <MESSAGE value="changed version" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed version" />
   </component>
 </project>

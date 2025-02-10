@@ -104,6 +104,18 @@ micronode.innerText = "Micronode";
 micronode.type = "button";
 micronode.id = "micronode";
 
+const digicomm85 = document.createElement("button");
+digicomm85.className = "btn btn-sm";
+digicomm85.innerText = "Digicomm 85MHz";
+digicomm85.type = "button";
+digicomm85.id = "digicomm85";
+
+const teleste85 = document.createElement("button");
+teleste85.className = "btn btn-sm";
+teleste85.innerText = "Teleste 85MHz";
+teleste85.type = "button";
+teleste85.id = "teleste85";
+
 niuButtonDiv.appendChild(mamp2cm85);
 niuButtonDiv.appendChild(WO85);
 niuButtonDiv.appendChild(micronode);
@@ -251,6 +263,12 @@ function addItem(e){
    productInput = "6148"
    break;
   case '4CM65':
+   productInput = "1764"
+   break;
+  case 'digicomm85':
+   productInput = "1764"
+   break;
+  case 'teleste85':
    productInput = "1764"
    break;
   case 'micronode':

@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbb9646e-905c-41ad-a749-598292960a87" name="Changes" comment="added entity viewer and stock button to dayplanning">
+    <list default="true" id="cbb9646e-905c-41ad-a749-598292960a87" name="Changes" comment="Adjusted variable in foreach loop to resolve bug with material kits.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dayplanning.js" beforeDir="false" afterPath="$PROJECT_DIR$/dayplanning.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/materialbtns.js" beforeDir="false" afterPath="$PROJECT_DIR$/materialbtns.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,12 +27,12 @@
     &quot;assignee&quot;: &quot;perquyk&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/perquyk/frustrafix.git&quot;,
-    &quot;accountId&quot;: &quot;6201982b-4d96-432f-8079-1715a5448a08&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/perquyk/frustrafix.git",
+    "accountId": "49a2e816-d7de-44a3-820b-9ce4a63639b1"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 6
@@ -67,7 +65,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-WS-243.21565.180" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.222" />
       </set>
     </attachedChunks>
   </component>
@@ -332,7 +330,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738945395004</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Adjusted variable in foreach loop to resolve bug with material kits.">
+      <option name="closed" value="true" />
+      <created>1739206924061</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1739206924061</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,6 +369,7 @@
     <MESSAGE value="updated version number" />
     <MESSAGE value="updated bug disclaimer for materialbuttons" />
     <MESSAGE value="added entity viewer and stock button to dayplanning" />
-    <option name="LAST_COMMIT_MESSAGE" value="added entity viewer and stock button to dayplanning" />
+    <MESSAGE value="Adjusted variable in foreach loop to resolve bug with material kits." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjusted variable in foreach loop to resolve bug with material kits." />
   </component>
 </project>

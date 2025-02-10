@@ -104,11 +104,11 @@ micronode.innerText = "Micronode";
 micronode.type = "button";
 micronode.id = "micronode";
 
-const digicomm85 = document.createElement("button");
-digicomm85.className = "btn btn-sm";
-digicomm85.innerText = "Digicomm 85MHz";
-digicomm85.type = "button";
-digicomm85.id = "digicomm85";
+const mamp1d85 = document.createElement("button");
+mamp1d85.className = "btn btn-sm";
+mamp1d85.innerText = "Mampaey 85MHz";
+mamp1d85.type = "button";
+mamp1d85.id = "mamp1cm85";
 
 const teleste85 = document.createElement("button");
 teleste85.className = "btn btn-sm";
@@ -116,12 +116,21 @@ teleste85.innerText = "Teleste 85MHz";
 teleste85.type = "button";
 teleste85.id = "teleste85";
 
-niuButtonDiv.appendChild(mamp2cm85);
-niuButtonDiv.appendChild(WO85);
-niuButtonDiv.appendChild(micronode);
-niuButtonDiv.appendChild(cm4Mhz85);
-niuButtonDiv.appendChild(cm4Mhz65);
-
+chrome.storage.sync.get("businesstech", (data) => {
+ if (data.businesstech) {
+  niuButtonDiv.appendChild(mamp2cm85);
+  niuButtonDiv.appendChild(WO85);
+  niuButtonDiv.appendChild(micronode);
+  niuButtonDiv.appendChild(cm4Mhz85);
+  niuButtonDiv.appendChild(cm4Mhz65);
+ } else {
+  niuButtonDiv.appendChild(mamp1d85);
+  niuButtonDiv.appendChild(teleste85);
+  niuButtonDiv.appendChild(WO85);
+  niuButtonDiv.appendChild(mamp2cm85);
+  niuButtonDiv.appendChild(micronode);
+ }
+})
 
 //STBs
 const stbDiv = document.createElement("div");
@@ -227,7 +236,7 @@ Apollo.addEventListener("click", addItem, false);
 pod.addEventListener("click", addItem, false);
 zte.addEventListener("click", addItem, false);
 
-function addItem(e){
+function addItem(e) {
  //form inputs on page
  const productSelect = document.querySelector("#new_product_type");
  const qtySelect = document.querySelector("#new_product_quantity");
@@ -240,7 +249,7 @@ function addItem(e){
  let status = "installed";
  let multiLine = false;
 
- switch(e.currentTarget.id){
+ switch (e.currentTarget.id) {
   case 'modemMarakele':
    productInput = "2075"
    break;
@@ -265,11 +274,11 @@ function addItem(e){
   case '4CM65':
    productInput = "1764"
    break;
-  case 'digicomm85':
-   productInput = "1764"
+  case 'mamp1cm85':
+   productInput = "0"
    break;
   case 'teleste85':
-   productInput = "1764"
+   productInput = "0"
    break;
   case 'micronode':
    productInput = "5049"
@@ -301,7 +310,7 @@ function addItem(e){
    break;
  }
 
- if(Array.isArray(productInput)){
+ if (Array.isArray(productInput)) {
   productInput.forEach((item) => {
    productSelect.value = item;
    statusSelect.value = status;
@@ -313,12 +322,11 @@ function addItem(e){
    console.log("Chosen Status: " + status);
 
   })
- }
- else{
+ } else {
   addProduct(productInput, quantity, status);
  }
 
- function addProduct(productInput, quantity, status){
+ function addProduct(productInput, quantity, status) {
   productSelect.value = productInput;
   qtySelect.value = quantity;
   statusSelect.value = status;
@@ -328,7 +336,4 @@ function addItem(e){
   console.log("Chosen Qty: " + quantity);
   console.log("Chosen Status: " + status);
  }
-
-
 }
-

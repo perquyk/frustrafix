@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         console.log("Loaded settings:", data);  // Debugging line
         document.getElementById('antscopy').checked = data.antscopy || false;
-        document.getElementById('favicon').checked = data.favicon || false;
-        document.getElementById('businesstech').checked = data.favicon || true;
+        document.getElementById('favicon').checked = data.favicon || true;
+        document.getElementById('businesstech').checked = data.businesstech || false;
         document.getElementById('feature2').checked = data.feature2 || false;
 
       }

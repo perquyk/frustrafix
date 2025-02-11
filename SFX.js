@@ -218,7 +218,7 @@ if(document.location.host == sfx){
         //klantnr
         let customer = document.createElement("div");
         customer.style.float = "left";
-        customer.style.marginLeft = "75px";
+        customer.style.marginLeft = "25px";
         customer.innerHTML = "<button class='btn dark' id='stock' style='border: 0px;padding: 11px 14px;'>Customer: " + klantnr + " </button>"
         
         //modemtest

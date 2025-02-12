@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error("Error retrieving settings:", chrome.runtime.lastError);
       } else {
         console.log("Loaded settings:", data);  // Debugging line
-        document.getElementById('antscopy').checked = data.antscopy || false;
+        document.getElementById('antscopy').checked = data.antscopy || true;
         document.getElementById('favicon').checked = data.favicon || true;
-        document.getElementById('businesstech').checked = data.businesstech || false;
+        document.getElementById('businesstech').checked = data.businesstech || true;
         document.getElementById('feature2').checked = data.feature2 || false;
 
       }

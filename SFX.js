@@ -5,6 +5,7 @@ var sfx = "webclient.unit-t.eu";
         const shAntsButton = document.getElementById("sh_btn_header_ants")
         const shSpotButton = document.getElementById("sh_btn_header_spot")
         const shWhiteDiv = shSpotButton.parentNode.previousSibling;
+        const shTimer = document.querySelectorAll("#timer");
         console.log(shWhiteDiv)
         if (shWhiteDiv){
             shWhiteDiv.remove();
@@ -14,7 +15,11 @@ var sfx = "webclient.unit-t.eu";
         }
         if (shSpotButton){
             shSpotButton.parentNode.remove()}
+        if(shTimer){
+            shTimer.forEach((item) => {item.remove()})
+        }
         },3000)
+
 
 
     //vars on load

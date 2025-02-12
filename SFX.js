@@ -1,11 +1,22 @@
 var sfx = "webclient.unit-t.eu";
-if(document.location.host == sfx){
+//if(document.location.host == sfx){
     //wait N sec, and remove shells buttons from top navbar
     setTimeout(() => {
-    const shAntsButton = document.getElementById("sh_btn_header_ants")
-    const shSpotButton = document.getElementById("sh_btn_header_spot")
-    shAntsButton.remove()
-    shSpotButton.remove()},3000)
+        const shAntsButton = document.getElementById("sh_btn_header_ants")
+        const shSpotButton = document.getElementById("sh_btn_header_spot")
+        const shWhiteDiv = shSpotButton.parentNode.previousSibling;
+        console.log(shWhiteDiv)
+        if (shWhiteDiv){
+            shWhiteDiv.remove();
+        }
+        if (shAntsButton){
+            shAntsButton.parentNode.remove()
+        }
+        if (shSpotButton){
+            shSpotButton.parentNode.remove()}
+        },3000)
+
+
     //vars on load
     let page = document.title;
     let tech = document.querySelector(".username").textContent.trim();
@@ -332,4 +343,4 @@ if(document.location.host == sfx){
 
     }
     
-}
+//}

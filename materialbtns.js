@@ -1,6 +1,8 @@
 // this file is made for testing the product & Service closer buttons. It won't be added to production just yet.
 const beta = true;
 
+document.querySelector("#new_product_type").value = "2075"
+
 console.log("materialbtns.js loaded");
 
 //select correct div for injection

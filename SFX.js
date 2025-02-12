@@ -1,5 +1,5 @@
 var sfx = "webclient.unit-t.eu";
-//if(document.location.host == sfx){
+if(document.location.host == sfx){
     //wait N sec, and remove shells buttons from top navbar
     setTimeout(() => {
         const shAntsButton = document.getElementById("sh_btn_header_ants")
@@ -348,4 +348,4 @@ var sfx = "webclient.unit-t.eu";
 
     }
     
-//}
+}

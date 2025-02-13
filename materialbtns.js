@@ -1,7 +1,15 @@
 // this file is made for testing the product & Service closer buttons. It won't be added to production just yet.
 const beta = true;
 
-document.querySelector("#new_product_type").value = "2075"
+setTimeout(() => {
+ const statusDropdown = document.querySelector('#new_product_status');
+ const installedStatusOption = document.createElement('option');
+ installedStatusOption.value = "installed";
+ installedStatusOption.dataMoveReasonId = "5"
+ installedStatusOption.dataWithRemark="false"
+ installedStatusOption.dataRequireRemark="false"
+ statusDropdown.appendChild(installedStatusOption)
+},1000)
 
 console.log("materialbtns.js loaded");
 

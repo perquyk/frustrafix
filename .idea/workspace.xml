@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbb9646e-905c-41ad-a749-598292960a87" name="Changes" comment="added entity viewer and stock button to dayplanning">
+    <list default="true" id="cbb9646e-905c-41ad-a749-598292960a87" name="Changes" comment="version number">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SFX.js" beforeDir="false" afterPath="$PROJECT_DIR$/SFX.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/options.js" beforeDir="false" afterPath="$PROJECT_DIR$/options.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,7 +16,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="test" />
+        <entry key="$PROJECT_DIR$" value="beta" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -29,31 +27,6 @@
     &quot;assignee&quot;: &quot;perquyk&quot;
   }
 }</component>
-  <component name="GitToolBoxStore">
-    <option name="recentBranches">
-      <RecentBranches>
-        <option name="branchesForRepo">
-          <list>
-            <RecentBranchesForRepo>
-              <option name="branches">
-                <list>
-                  <RecentBranch>
-                    <option name="branchName" value="beta" />
-                    <option name="lastUsedInstant" value="1739386049" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1739386048" />
-                  </RecentBranch>
-                </list>
-              </option>
-              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
-            </RecentBranchesForRepo>
-          </list>
-        </option>
-      </RecentBranches>
-    </option>
-  </component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/perquyk/frustrafix.git&quot;,
@@ -73,21 +46,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "beta",
-    "last_opened_file_path": "C:/Users/perqu/Documents/GitHub/frustrafix",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/perqu/Documents/GitHub/frustrafix&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\perqu\Documents\GitHub\frustrafix" />
@@ -128,6 +101,9 @@
       <workItem from="1738886906735" duration="9000" />
       <workItem from="1738939092952" duration="478000" />
       <workItem from="1738939585494" duration="3324000" />
+      <workItem from="1739394068514" duration="1866000" />
+      <workItem from="1739457541518" duration="2642000" />
+      <workItem from="1739653207603" duration="319000" />
     </task>
     <task id="LOCAL-00001" summary="adjusted query select number">
       <option name="closed" value="true" />
@@ -361,26 +337,112 @@
       <option name="project" value="LOCAL" />
       <updated>1738945395004</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="made the shell-button-remover better in sfx task">
+      <option name="closed" value="true" />
+      <created>1739391718887</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1739391718887</updated>
+    </task>
+    <task id="LOCAL-00031" summary="added check for timer, removed timer and even removed multiple timers if multiple are added like 2023">
+      <option name="closed" value="true" />
+      <created>1739392025359</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1739392025359</updated>
+    </task>
+    <task id="LOCAL-00032" summary="changed version number">
+      <option name="closed" value="true" />
+      <created>1739392255608</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1739392255608</updated>
+    </task>
+    <task id="LOCAL-00033" summary="adjusted beta disclaimer">
+      <option name="closed" value="true" />
+      <created>1739392271682</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1739392271682</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Added WF labeling">
+      <option name="closed" value="true" />
+      <created>1739392787310</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1739392787310</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Attempt to fix first item bug">
+      <option name="closed" value="true" />
+      <created>1739393508341</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1739393508341</updated>
+    </task>
+    <task id="LOCAL-00036" summary="removed comments that were for testing purposes.">
+      <option name="closed" value="true" />
+      <created>1739393534681</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1739393534681</updated>
+    </task>
+    <task id="LOCAL-00037" summary="changed version number">
+      <option name="closed" value="true" />
+      <created>1739393583519</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1739393583519</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Added Beta to appname">
+      <option name="closed" value="true" />
+      <created>1739393604601</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1739393604601</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Removed Beta">
+      <option name="closed" value="true" />
+      <created>1739393661104</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1739393661104</updated>
+    </task>
+    <task id="LOCAL-00040" summary="added bugfix for first-item bug">
+      <option name="closed" value="true" />
+      <created>1739458955751</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1739458955751</updated>
+    </task>
+    <task id="LOCAL-00041" summary="version number">
+      <option name="closed" value="true" />
+      <created>1739458988166</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1739458988166</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="adjusted query select number" />
-    <MESSAGE value="version number change" />
-    <MESSAGE value="bugfix with old history list" />
-    <MESSAGE value="added unmanaged vdsl to shortcuts" />
-    <MESSAGE value="Removed unused files" />
-    <MESSAGE value="/" />
-    <MESSAGE value="removed sos kenny button" />
-    <MESSAGE value="Added buttons to the index pages." />
-    <MESSAGE value="corrected if statement" />
     <MESSAGE value="added check for eKC so h1 is not deleted there." />
     <MESSAGE value="removed all mentions of soskenny" />
     <MESSAGE value="added icon to sfx home.js" />
-    <MESSAGE value="changed version number" />
     <MESSAGE value="prepend home buttons instead of appending" />
     <MESSAGE value="added cafe and sf buttons to dayplanning" />
     <MESSAGE value="added testing for materialbtns" />
@@ -392,6 +454,28 @@
     <MESSAGE value="updated version number" />
     <MESSAGE value="updated bug disclaimer for materialbuttons" />
     <MESSAGE value="added entity viewer and stock button to dayplanning" />
-    <option name="LAST_COMMIT_MESSAGE" value="added entity viewer and stock button to dayplanning" />
+    <MESSAGE value="made the shell-button-remover better in sfx task" />
+    <MESSAGE value="added check for timer, removed timer and even removed multiple timers if multiple are added like 2023" />
+    <MESSAGE value="adjusted beta disclaimer" />
+    <MESSAGE value="Added WF labeling" />
+    <MESSAGE value="Attempt to fix first item bug" />
+    <MESSAGE value="removed comments that were for testing purposes." />
+    <MESSAGE value="changed version number" />
+    <MESSAGE value="Added Beta to appname" />
+    <MESSAGE value="Removed Beta" />
+    <MESSAGE value="added bugfix for first-item bug" />
+    <MESSAGE value="version number" />
+    <option name="LAST_COMMIT_MESSAGE" value="version number" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/materialbtns.js</url>
+          <line>3</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

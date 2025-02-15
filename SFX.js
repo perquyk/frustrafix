@@ -1,10 +1,15 @@
 var sfx = "webclient.unit-t.eu";
-if(document.location.host == sfx){
+const dev = true;
+if(document.location.host == sfx || dev === true){
     //wait N sec, and remove shells buttons from top navbar
-    setTimeout(() => {
+    for(let i = 0; i < 5; i++){
+        setTimeout(() => {removeShells()},1500)
+    }
+    function removeShells(){
         const shAntsButton = document.getElementById("sh_btn_header_ants")
         const shSpotButton = document.getElementById("sh_btn_header_spot")
-        const shWhiteDiv = shSpotButton.parentNode.previousSibling;
+        let shWhiteDiv;
+        if(shSpotButton){shWhiteDiv = shSpotButton.parentNode.previousSibling;}
         const shTimer = document.querySelectorAll("#timer");
         console.log(shWhiteDiv)
         if (shWhiteDiv){
@@ -18,9 +23,7 @@ if(document.location.host == sfx){
         if(shTimer){
             shTimer.forEach((item) => {item.remove()})
         }
-        },3000)
-
-
+    }
 
     //vars on load
     let page = document.title;

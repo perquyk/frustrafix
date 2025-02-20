@@ -1,5 +1,5 @@
 // this file is made for testing the product & Service closer buttons. It won't be added to production just yet.
-const beta = true;
+const beta = false;
 
 setTimeout(() => {
  const statusDropdown = document.querySelector('#new_product_status');

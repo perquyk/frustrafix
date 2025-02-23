@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbb9646e-905c-41ad-a749-598292960a87" name="Changes" comment="version number">
+    <list default="true" id="cbb9646e-905c-41ad-a749-598292960a87" name="Changes" comment="small loop for shells buttons to be sure they dissapear even after delay of max 7.5 secs">
+      <change afterPath="$PROJECT_DIR$/htmlinject.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/refactorSFX.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SFX.js" beforeDir="false" afterPath="$PROJECT_DIR$/SFX.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frustrafix.css" beforeDir="false" afterPath="$PROJECT_DIR$/frustrafix.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/materialbtns.js" beforeDir="false" afterPath="$PROJECT_DIR$/materialbtns.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +20,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="beta" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -50,7 +54,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;refactor-sfx&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/perqu/Documents/GitHub/frustrafix&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -103,7 +107,15 @@
       <workItem from="1738939585494" duration="3324000" />
       <workItem from="1739394068514" duration="1866000" />
       <workItem from="1739457541518" duration="2642000" />
-      <workItem from="1739653207603" duration="319000" />
+      <workItem from="1739653207603" duration="1960000" />
+      <workItem from="1739737141520" duration="1086000" />
+      <workItem from="1739785716264" duration="32000" />
+      <workItem from="1739789830096" duration="154000" />
+      <workItem from="1739798746076" duration="12000" />
+      <workItem from="1739988858960" duration="1000" />
+      <workItem from="1739989010807" duration="2000" />
+      <workItem from="1740342170466" duration="1775000" />
+      <workItem from="1740344551994" duration="3449000" />
     </task>
     <task id="LOCAL-00001" summary="adjusted query select number">
       <option name="closed" value="true" />
@@ -433,14 +445,32 @@
       <option name="project" value="LOCAL" />
       <updated>1739458988166</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="small loop for shells buttons to be sure they dissapear even after delay of max 7.5 secs">
+      <option name="closed" value="true" />
+      <created>1739653726655</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1739653726655</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added check for eKC so h1 is not deleted there." />
     <MESSAGE value="removed all mentions of soskenny" />
     <MESSAGE value="added icon to sfx home.js" />
     <MESSAGE value="prepend home buttons instead of appending" />
@@ -465,17 +495,7 @@
     <MESSAGE value="Removed Beta" />
     <MESSAGE value="added bugfix for first-item bug" />
     <MESSAGE value="version number" />
-    <option name="LAST_COMMIT_MESSAGE" value="version number" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/materialbtns.js</url>
-          <line>3</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="small loop for shells buttons to be sure they dissapear even after delay of max 7.5 secs" />
+    <option name="LAST_COMMIT_MESSAGE" value="small loop for shells buttons to be sure they dissapear even after delay of max 7.5 secs" />
   </component>
 </project>

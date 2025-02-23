@@ -22,3 +22,21 @@
     display: flex;
     gap: 5px;
 }
+
+.navbarButton {
+    padding: 11px 14px !important;
+}
+.navbarButton.secondary {
+    background-color: #36454F !important;
+}
+.navbarButtonDiv {
+    display: flex;
+    float: left;
+    gap: 15px;
+    margin-left: 20px;
+}
+.navbarButtonGroup {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "FrustraFix",
-  "version": "3.3.6.6",
+  "version": "3.4.0.0",
   "options_page": "options.html",
   "permissions": ["storage"],
 
@@ -28,7 +28,7 @@
         "https://smartfix.unit-t.eu/*",
         "file://*"
       ],
-      "js": ["SFX.js", "dayplanning.js", "antscopy.js", "home.js", "favicon.js", "materialbtns.js", "provisioning.js"],
+      "js": ["dayplanning.js", "antscopy.js", "home.js", "favicon.js", "materialbtns.js", "SFX.js"],
       "css": ["frustrafix.css"]
     }
   ]

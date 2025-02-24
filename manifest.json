@@ -1,7 +1,8 @@
 {
   "manifest_version": 3,
   "name": "FrustraFix",
-  "version": "3.4.0.0",
+  "version": "3.4.1.0",
+
 
   "options_page": "options.html",
   "permissions": ["storage"],

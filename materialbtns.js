@@ -285,10 +285,10 @@ function addItem(e) {
    productInput = "1764"
    break;
   case 'mamp1cm85':
-   productInput = "0"
+   productInput = "6143"
    break;
   case 'teleste85':
-   productInput = "0"
+   productInput = "6144"
    break;
   case 'micronode':
    productInput = "5049"

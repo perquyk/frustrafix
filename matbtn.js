@@ -1,5 +1,12 @@
 console.log("matbtn.js loaded")
 initMatBut();
+//determine tech level
+let techLevel = 1;
+chrome.storage.sync.get("businesstech", (data) => {
+    if (data.businesstech) {
+        techLevel = 2;
+    }
+})
 //product arrays
 const tlnModems = [
     {label: "Marakele", id: "2075", isKit: false, isMulti: false},
@@ -58,17 +65,7 @@ const productServicesCloserPortletBody = productServicesCloser.querySelector(".p
 const buttonDiv = document.createElement("div");
 buttonDiv.className = "buttonDiv";
 
-//determine tech level
-let techLevel = 1;
-chrome.storage.sync.get("businesstech", (data) => {
-    if (data.businesstech) {
-    techLevel = 2;
-    }
-})
-console.log(techLevel)
-
-//append all groups to buttonDiv
-
+//function that determines which group of buttons should be shown according to tasktype
 function drawButtons(){
     const workOrderTitle = document.querySelector(".col-md-6.workorder_title").innerText.split("/");
     const taskType = workOrderTitle[workOrderTitle.length - 1].trim();

@@ -27,6 +27,7 @@ const extras = [
     {label: "Stekkerblok", id: "1595", isKit: false, isMulti: true},
     {label: "Switch", id: "6087", isKit: false, isMulti: true},
 ]
+
 //injection target
 const productServicesCloser = document.querySelector('#productCloserViewWrappers');
 const productServicesCloserPortletBody = productServicesCloser.querySelector(".portlet-body");

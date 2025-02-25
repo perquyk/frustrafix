@@ -1,5 +1,4 @@
 initMatBut();
-
 //product arrays
 const tlnModems = [
     {label: "Marakele", id: "2075", isKit: false, isMulti: false},
@@ -69,7 +68,7 @@ const taskType = () => {
         return "TC";
     }
 }
-//determin tech level
+//determine tech level
 const techLevel = () => {
     //inhome = 1, b2b = 2
     return 2;

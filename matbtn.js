@@ -1,21 +1,5 @@
 initMatBut();
-// determine NIUs via chrome.storage
-const taskType = () => {
-    if (2 === 1) {
-        //if xgspon task, return Telenet XGspon
-        return "TXG";
-    }
-    else if (2 === 4) {
-        //if base install, return BAse
-        return "BA";
-    } else {
-        //if nothing else, return Telenet Coax
-        return "TC";
-    }
-}
-const inHomeTech = () => {
-    return 2 !== 1;
-}
+
 //product arrays
 const tlnModems = [
     {label: "Marakele", id: "2075", isKit: false, isMulti: false},
@@ -71,6 +55,27 @@ const productServicesCloserPortletBody = productServicesCloser.querySelector(".p
 const buttonDiv = document.createElement("div");
 buttonDiv.className = "buttonDiv";
 
+//determine tasktype
+const taskType = () => {
+    if (2 === 1) {
+        //if xgspon task, return Telenet XGspon
+        return "TXG";
+    }
+    else if (2 === 4) {
+        //if base install, return BAse
+        return "BA";
+    } else {
+        //if nothing else, return Telenet Coax
+        return "TC";
+    }
+}
+//determin tech level
+const techLevel = () => {
+    //inhome = 1, b2b = 2
+    return 2;
+}
+
+
 //append all groups to buttonDiv
 switch(taskType){
     case "TC":
@@ -94,10 +99,13 @@ switch(taskType){
 
 
 function returnNIU(){
-    if(!inHomeTech){
-    buttonDiv.appendChild(makeGroup("NIUs", B2BNIUs));
-    }else{
-        buttonDiv.appendChild(makeGroup("NIUs", inhomeNIUs));
+    switch(techLevel()){
+        case "1":
+            buttonDiv.appendChild(makeGroup("NIUs", inhomeNIUs));
+            break;
+        case "2":
+            buttonDiv.appendChild(makeGroup("NIU", B2BNIUs));
+            break;
     }
 }
 

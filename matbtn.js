@@ -1,3 +1,4 @@
+console.log("matbtn.js loaded")
 initMatBut();
 //product arrays
 const tlnModems = [
@@ -20,12 +21,15 @@ const inhomeNIUs = [
     {label: "LL 85MHz", id: "6480", isKit: false, isMulti: false},
     {label: "Micronode", id: "5049", isKit: false, isMulti: false},
 ]
-
-const tlnSTBs = [
+const coaxSTBs = [
     {label: "Apollo Kit", id: ["6381", "6382", "6383"], isKit: true, isMulti: true},
     {label: "EOSv2 Kit", id: ["3222", "3223", "1796"], isKit: true, isMulti: true},
     {label: "HDDC", id: "1607", isKit: false, isMulti: true, inhome: true},
     {label: "HDDB", id: "2408", isKit: false, isMulti: true, inhome: true},
+]
+const xgsponSTBs = [
+    {label: "Apollo Kit", id: ["6381", "6382", "6383"], isKit: true, isMulti: true},
+    {label: "EOSv2 Kit", id: ["3222", "3223", "1796"], isKit: true, isMulti: true},
 ]
 const tlnExtras = [
     {label: "360 POD", id: "5340", isKit: false, isMulti: true, inhome: true},
@@ -54,55 +58,52 @@ const productServicesCloserPortletBody = productServicesCloser.querySelector(".p
 const buttonDiv = document.createElement("div");
 buttonDiv.className = "buttonDiv";
 
-//determine tasktype
-const taskType = () => {
-    if (2 === 1) {
-        //if xgspon task, return Telenet XGspon
-        return "TXG";
-    }
-    else if (2 === 4) {
-        //if base install, return BAse
-        return "BA";
-    } else {
-        //if nothing else, return Telenet Coax
-        return "TC";
-    }
-}
 //determine tech level
-const techLevel = () => {
-    //inhome = 1, b2b = 2
-    return 2;
-}
-
+let techLevel = 1;
+chrome.storage.sync.get("businesstech", (data) => {
+    if (data.businesstech) {
+    techLevel = 2;
+    }
+})
+console.log(techLevel)
 
 //append all groups to buttonDiv
-switch(taskType){
-    case "TC":
-        buttonDiv.appendChild(makeGroup("Modems", tlnModems));
-        returnNIU();
-        buttonDiv.appendChild(makeGroup("STBs", tlnSTBs));
-        buttonDiv.appendChild(makeGroup("Extras", tlnExtras));
-        break;
-    case "BA":
-        buttonDiv.appendChild(makeGroup("Modems", baseModems));
-        returnNIU();
-        buttonDiv.appendChild(makeGroup("STBs", baseSTBs))
-        buttonDiv.appendChild(makeGroup("Extras", baseExtras))
-        break;
-    case "TXG":
-        buttonDiv.appendChild(makeGroup("OLTs", xgsponModems));
-        buttonDiv.appendChild(makeGroup("STBs", tlnSTBs));
-        buttonDiv.appendChild(makeGroup("Extras", tlnExtras));
-        break;
+
+function drawButtons(){
+    const workOrderTitle = document.querySelector(".col-md-6.workorder_title").innerText.split("/");
+    const taskType = workOrderTitle[workOrderTitle.length - 1].trim();
+    switch(taskType) {
+        case "Comfort Base Install":
+        case "Base Install update":
+        case "Base Finish self install":
+        case "Base Repair":
+        case "Base DIY Support":
+            buttonDiv.appendChild(makeGroup("Modems", baseModems));
+            returnNIU();
+            buttonDiv.appendChild(makeGroup("STBs", baseSTBs))
+            buttonDiv.appendChild(makeGroup("Extras", baseExtras))
+            break;
+        case "XGSPON Repair":
+        case "XGSPON Comfort Install":
+            buttonDiv.appendChild(makeGroup("ONTs", xgsponModems));
+            buttonDiv.appendChild(makeGroup("STBs", xgsponSTBs));
+            buttonDiv.appendChild(makeGroup("Extras", tlnExtras));
+            break;
+        default:
+            buttonDiv.appendChild(makeGroup("Modems", tlnModems));
+            returnNIU();
+            buttonDiv.appendChild(makeGroup("STBs", coaxSTBs));
+            buttonDiv.appendChild(makeGroup("Extras", tlnExtras));
+            break;
+    }
 }
 
-
 function returnNIU(){
-    switch(techLevel()){
-        case "1":
+    switch(techLevel){
+        case 1:
             buttonDiv.appendChild(makeGroup("NIUs", inhomeNIUs));
             break;
-        case "2":
+        case 2:
             buttonDiv.appendChild(makeGroup("NIU", B2BNIUs));
             break;
     }
@@ -190,3 +191,4 @@ function addProduct(qty, status, product){
     console.log("added: " + qty + "x - " + product + " - " + status);
 }
 }
+drawButtons();

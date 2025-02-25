@@ -24,6 +24,8 @@ const STBs = [
 const extras = [
     {label: "360 POD", id: "5340", isKit: false, isMulti: true, inhome: true},
     {label: "ZTE Modem", id: "5181", isKit: false, isMulti: true, inhome: true},
+    {label: "Stekkerblok", id: "1595", isKit: false, isMulti: true},
+    {label: "Switch", id: "6087", isKit: false, isMulti: true},
 ]
 //injection target
 const productServicesCloser = document.querySelector('#productCloserViewWrappers');
@@ -37,7 +39,7 @@ buttonDiv.className = "buttonDiv";
 buttonDiv.appendChild(makeGroup("Modems", modems));
 buttonDiv.appendChild(makeGroup("NIUs", NIUs));
 buttonDiv.appendChild(makeGroup("STBs", STBs));
-buttonDiv.appendChild(makeGroup("extras", extras));
+buttonDiv.appendChild(makeGroup("Extras", extras));
 
 //append buttonDiv to injection target
 productServicesCloserPortletBody.prepend(buttonDiv);

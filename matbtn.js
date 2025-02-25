@@ -1,31 +1,60 @@
+console.log("matbtn.js loaded")
 initMatBut();
-// determine NIUs via chrome.storage
-
+//determine tech level
+let techLevel = 1;
+chrome.storage.sync.get("businesstech", (data) => {
+    if (data.businesstech) {
+        techLevel = 2;
+    }
+})
 //product arrays
-const modems = [
+const tlnModems = [
     {label: "Marakele", id: "2075", isKit: false, isMulti: false},
     {label: "F@st", id: "4418", isKit: false, isMulti: false},
     {label: "MV2", id: "2368", isKit: false, isMulti: false},
     {label: "MV1", id: "1596", isKit: false, isMulti: false},
 ]
-const NIUs = [
+const B2BNIUs = [
     {label: "2CM 85MHz", id: "6380", isKit: false, isMulti: false},
     {label: "WO 85MHz", id: "6147", isKit: false, isMulti: false},
     {label: "4CM 85MHz", id: "6148", isKit: false, isMulti: false},
     {label: "4CM 65MHz", id: "1764", isKit: false, isMulti: false},
     {label: "Micronode", id: "5049", isKit: false, isMulti: false},
 ]
-const STBs = [
+const inhomeNIUs = [
+    {label: "Mampaey 85MHz", id: "6143", isKit: false, isMulti: false},
+    {label: "Teleste 85MHz", id: "6144", isKit: false, isMulti: false},
+    {label: "WO 85MHz", id: "6147", isKit: false, isMulti: false},
+    {label: "LL 85MHz", id: "6480", isKit: false, isMulti: false},
+    {label: "Micronode", id: "5049", isKit: false, isMulti: false},
+]
+const coaxSTBs = [
     {label: "Apollo Kit", id: ["6381", "6382", "6383"], isKit: true, isMulti: true},
     {label: "EOSv2 Kit", id: ["3222", "3223", "1796"], isKit: true, isMulti: true},
     {label: "HDDC", id: "1607", isKit: false, isMulti: true, inhome: true},
     {label: "HDDB", id: "2408", isKit: false, isMulti: true, inhome: true},
 ]
-const extras = [
+const xgsponSTBs = [
+    {label: "Apollo Kit", id: ["6381", "6382", "6383"], isKit: true, isMulti: true},
+    {label: "EOSv2 Kit", id: ["3222", "3223", "1796"], isKit: true, isMulti: true},
+]
+const tlnExtras = [
     {label: "360 POD", id: "5340", isKit: false, isMulti: true, inhome: true},
     {label: "ZTE Modem", id: "5181", isKit: false, isMulti: true, inhome: true},
     {label: "Stekkerblok", id: "1595", isKit: false, isMulti: true},
     {label: "Switch", id: "6087", isKit: false, isMulti: true},
+]
+const baseModems = [
+    {label: "Base MV1", id: "0", isKit: false, isMulti: false},
+]
+const baseSTBs = [
+    {label: "Base Apollo KIT", id: ["0","0","0"], isKit: true, isMulti: false},
+]
+const baseExtras = [
+    {label: "DECO", id: "0", isKit: false, isMulti: true},
+]
+const xgsponModems = [
+    {label: "MV3", id: "0", isKit: false, isMulti: false},
 ]
 
 //injection target
@@ -36,11 +65,46 @@ const productServicesCloserPortletBody = productServicesCloser.querySelector(".p
 const buttonDiv = document.createElement("div");
 buttonDiv.className = "buttonDiv";
 
-//append all groups to buttonDiv
-buttonDiv.appendChild(makeGroup("Modems", modems));
-buttonDiv.appendChild(makeGroup("NIUs", NIUs));
-buttonDiv.appendChild(makeGroup("STBs", STBs));
-buttonDiv.appendChild(makeGroup("Extras", extras));
+//function that determines which group of buttons should be shown according to tasktype
+function drawButtons(){
+    const workOrderTitle = document.querySelector(".col-md-6.workorder_title").innerText.split("/");
+    const taskType = workOrderTitle[workOrderTitle.length - 1].trim();
+    switch(taskType) {
+        case "Comfort Base Install":
+        case "Base Install update":
+        case "Base Finish self install":
+        case "Base Repair":
+        case "Base DIY Support":
+            buttonDiv.appendChild(makeGroup("Modems", baseModems));
+            returnNIU();
+            buttonDiv.appendChild(makeGroup("STBs", baseSTBs))
+            buttonDiv.appendChild(makeGroup("Extras", baseExtras))
+            break;
+        case "XGSPON Repair":
+        case "XGSPON Comfort Install":
+            buttonDiv.appendChild(makeGroup("ONTs", xgsponModems));
+            buttonDiv.appendChild(makeGroup("STBs", xgsponSTBs));
+            buttonDiv.appendChild(makeGroup("Extras", tlnExtras));
+            break;
+        default:
+            buttonDiv.appendChild(makeGroup("Modems", tlnModems));
+            returnNIU();
+            buttonDiv.appendChild(makeGroup("STBs", coaxSTBs));
+            buttonDiv.appendChild(makeGroup("Extras", tlnExtras));
+            break;
+    }
+}
+
+function returnNIU(){
+    switch(techLevel){
+        case 1:
+            buttonDiv.appendChild(makeGroup("NIUs", inhomeNIUs));
+            break;
+        case 2:
+            buttonDiv.appendChild(makeGroup("NIU", B2BNIUs));
+            break;
+    }
+}
 
 //append buttonDiv to injection target
 productServicesCloserPortletBody.prepend(buttonDiv);
@@ -124,3 +188,4 @@ function addProduct(qty, status, product){
     console.log("added: " + qty + "x - " + product + " - " + status);
 }
 }
+drawButtons();

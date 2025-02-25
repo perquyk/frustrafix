@@ -9,6 +9,9 @@ const taskType = () => {
         return "TC"
     }
 }
+const inHomeTech = () => {
+    return 2 !== 1;
+}
 //product arrays
 const tlnModems = [
     {label: "Marakele", id: "2075", isKit: false, isMulti: false},
@@ -78,7 +81,7 @@ switch(taskType){
         buttonDiv.appendChild(makeGroup("STBs", baseSTBs))
         buttonDiv.appendChild(makeGroup("Extras", baseExtras))
         break;
-    case "TXGSPON":
+    case "TXG":
         buttonDiv.appendChild(makeGroup("OLTs", xgsponModems));
         buttonDiv.appendChild(makeGroup("STBs", tlnSTBs));
         buttonDiv.appendChild(makeGroup("Extras", tlnExtras));
@@ -87,7 +90,7 @@ switch(taskType){
 
 
 function returnNIU(){
-    if(!inhomeTech){
+    if(!inHomeTech){
     buttonDiv.appendChild(makeGroup("NIUs", B2BNIUs));
     }else{
         buttonDiv.appendChild(makeGroup("NIUs", inhomeNIUs));

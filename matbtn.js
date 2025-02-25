@@ -1,12 +1,16 @@
 initMatBut();
 // determine NIUs via chrome.storage
 const taskType = () => {
-    if(2===1){
-
+    if (2 === 1) {
+        //if xgspon task, return Telenet XGspon
+        return "TXG";
     }
-    else{
+    else if (2 === 4) {
+        //if base install, return BAse
+        return "BA";
+    } else {
         //if nothing else, return Telenet Coax
-        return "TC"
+        return "TC";
     }
 }
 const inHomeTech = () => {

@@ -9,16 +9,17 @@ const modems = [
     {label: "MV1", id: "1596", isKit: false, isMulti: false},
 ]
 const NIUs = [
-    {label: "2CM 85MHz", id: "123", isKit: false, isMulti: false},
-    {label: "WO 85MHz", id: "123", isKit: false, isMulti: false},
-    {label: "4CM 85MHz", id: "123", isKit: false, isMulti: false},
-    {label: "4CM 65MHz", id: "123", isKit: false, isMulti: false},
+    {label: "2CM 85MHz", id: "6380", isKit: false, isMulti: false},
+    {label: "WO 85MHz", id: "6147", isKit: false, isMulti: false},
+    {label: "4CM 85MHz", id: "6148", isKit: false, isMulti: false},
+    {label: "4CM 65MHz", id: "1764", isKit: false, isMulti: false},
+    {label: "Micronode", id: "5049", isKit: false, isMulti: false},
 ]
 const STBs = [
-    {label: "Apollo Kit", id: ["159", "1596", "123488"], isKit: true, isMulti: true},
-    {label: "EOSv2 Kit", id: ["8522", "254645", "68451"], isKit: true, isMulti: true},
-    {label: "HDDC", id: "123123", isKit: false, isMulti: true, inhome: true},
-    {label: "HDDB", id: "321213", isKit: false, isMulti: true, inhome: true},
+    {label: "Apollo Kit", id: ["6381", "6382", "6383"], isKit: true, isMulti: true},
+    {label: "EOSv2 Kit", id: ["3222", "3223", "1796"], isKit: true, isMulti: true},
+    {label: "HDDC", id: "1607", isKit: false, isMulti: true, inhome: true},
+    {label: "HDDB", id: "2408", isKit: false, isMulti: true, inhome: true},
 ]
 const extras = [
     {label: "360 POD", id: "5340", isKit: false, isMulti: true, inhome: true},

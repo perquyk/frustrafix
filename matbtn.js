@@ -1,10 +1,12 @@
 console.log("matbtn.js loaded")
 initMatBut();
 //determine tech level
-let techLevel = 1;
+const techLevel = 2;
 chrome.storage.sync.get("businesstech", (data) => {
     if (data.businesstech) {
-        techLevel = 2;
+        techLevel(2);
+    } else {
+        techLevel(1);
     }
 })
 //product arrays
@@ -45,16 +47,16 @@ const tlnExtras = [
     {label: "Switch", id: "6087", isKit: false, isMulti: true},
 ]
 const baseModems = [
-    {label: "Base MV1", id: "0", isKit: false, isMulti: false},
+    {label: "Base MV1", id: "6514", isKit: false, isMulti: false},
 ]
 const baseSTBs = [
-    {label: "Base Apollo KIT", id: ["0","0","0"], isKit: true, isMulti: false},
+    {label: "Base Apollo KIT", id: ["6601","6602","6383"], isKit: true, isMulti: false},
 ]
 const baseExtras = [
-    {label: "DECO", id: "0", isKit: false, isMulti: true},
+    {label: "DECO", id: "6529", isKit: false, isMulti: true},
 ]
 const xgsponModems = [
-    {label: "MV3", id: "0", isKit: false, isMulti: false},
+    {label: "MV3", id: "6488", isKit: false, isMulti: false},
 ]
 
 //injection target

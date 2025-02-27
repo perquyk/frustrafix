@@ -27,10 +27,10 @@ if(page == "https://smartfix.unit-t.eu/interventions?" || page == "https://smart
         navbar.appendChild(entityViewerli);
 
         stockBtn.addEventListener("click", function(){
-            window.open("https://webclient.unit-t.eu/warehouses/overview/?sopReferrer=interventions&sopLang=en_US", "_self")
+            window.open("https://webclient.unit-t.eu/warehouses/overview/?sopReferrer=interventions&sopLang=en_US", "_blank")
         })
         entityViewerli.addEventListener("click", function(){
-            window.open("https://smartfix.unit-t.eu/tasks?", "_self")
+            window.open("https://smartfix.unit-t.eu/tasks?", "_blank")
         })
 
         console.log(navbar);

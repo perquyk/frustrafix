@@ -1,14 +1,6 @@
 console.log("matbtn.js loaded")
 initMatBut();
-//determine tech level
-const techLevel = 2;
-chrome.storage.sync.get("businesstech", (data) => {
-    if (data.businesstech) {
-        techLevel(2);
-    } else {
-        techLevel(1);
-    }
-})
+
 //product arrays
 const tlnModems = [
     {label: "Marakele", id: "2075", isKit: false, isMulti: false},
@@ -77,10 +69,20 @@ function drawButtons(){
         case "Base Finish self install":
         case "Base Repair":
         case "Base DIY Support":
-            buttonDiv.appendChild(makeGroup("Modems", baseModems));
-            returnNIU();
-            buttonDiv.appendChild(makeGroup("STBs", baseSTBs))
-            buttonDiv.appendChild(makeGroup("Extras", baseExtras))
+            chrome.storage.sync.get("businesstech", (data) => {
+                if (data.businesstech) {
+                    buttonDiv.appendChild(makeGroup("Modems", baseModems));
+                    buttonDiv.appendChild(makeGroup("NIUs", B2BNIUs));
+                    buttonDiv.appendChild(makeGroup("STBs", baseSTBs))
+                    buttonDiv.appendChild(makeGroup("Extras", baseExtras))
+                } else {
+                    buttonDiv.appendChild(makeGroup("Modems", baseModems));
+                    buttonDiv.appendChild(makeGroup("NIUs", inhomeNIUs));
+                    buttonDiv.appendChild(makeGroup("STBs", baseSTBs))
+                    buttonDiv.appendChild(makeGroup("Extras", baseExtras))
+                }
+            })
+
             break;
         case "XGSPON Repair":
         case "XGSPON Comfort Install":
@@ -89,24 +91,24 @@ function drawButtons(){
             buttonDiv.appendChild(makeGroup("Extras", tlnExtras));
             break;
         default:
-            buttonDiv.appendChild(makeGroup("Modems", tlnModems));
-            returnNIU();
-            buttonDiv.appendChild(makeGroup("STBs", coaxSTBs));
-            buttonDiv.appendChild(makeGroup("Extras", tlnExtras));
+            chrome.storage.sync.get("businesstech", (data) => {
+                if (data.businesstech) {
+                    buttonDiv.appendChild(makeGroup("Modems", tlnModems));
+                    buttonDiv.appendChild(makeGroup("NIUs", B2BNIUs));
+                    buttonDiv.appendChild(makeGroup("STBs", coaxSTBs));
+                    buttonDiv.appendChild(makeGroup("Extras", tlnExtras));
+                } else {
+                    buttonDiv.appendChild(makeGroup("Modems", tlnModems));
+                    buttonDiv.appendChild(makeGroup("NIUs", inhomeNIUs));
+                    buttonDiv.appendChild(makeGroup("STBs", coaxSTBs));
+                    buttonDiv.appendChild(makeGroup("Extras", tlnExtras));
+                }
+            })
             break;
     }
 }
 
-function returnNIU(){
-    switch(techLevel){
-        case 1:
-            buttonDiv.appendChild(makeGroup("NIUs", inhomeNIUs));
-            break;
-        case 2:
-            buttonDiv.appendChild(makeGroup("NIU", B2BNIUs));
-            break;
-    }
-}
+
 
 //append buttonDiv to injection target
 productServicesCloserPortletBody.prepend(buttonDiv);

@@ -3,13 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
     chrome.storage.sync.get(['antscopy', 'favicon', 'businesstech', 'feature2'], (data) => {
       if (chrome.runtime.lastError) {
         console.error("Error retrieving settings:", chrome.runtime.lastError);
-      } else {
+      }
+      else {
         console.log("Loaded settings:", data);  // Debugging line
-        document.getElementById('antscopy').checked = data.antscopy || true;
-        document.getElementById('favicon').checked = data.favicon || true;
-        document.getElementById('businesstech').checked = data.businesstech || true;
-        document.getElementById('feature2').checked = data.feature2 || false;
-
+        document.getElementById('antscopy').checked = data.antscopy;
+        document.getElementById('favicon').checked = data.favicon;
+        document.getElementById('businesstech').checked = data.businesstech;
+        document.getElementById('feature2').checked = data.feature2;
       }
     });
   

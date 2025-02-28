@@ -4,8 +4,8 @@ chrome.runtime.onInstalled.addListener(() => {
       if (data.antscopy === undefined && data.feature2 === undefined) {
         chrome.storage.sync.set({
           antscopy: true,  // Default to enabled
-            businesstech: true,
-            favicon: true,
+          businesstech: true,
+          favicon: true,
           feature2: false  // Default to disabled
         });
       }

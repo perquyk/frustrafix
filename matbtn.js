@@ -1,4 +1,3 @@
-console.log("matbtn.js loaded")
 initMatBut();
 
 //product arrays

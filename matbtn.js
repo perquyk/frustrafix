@@ -18,7 +18,7 @@ const inhomeNIUs = [
     {label: "Mampaey 85MHz", id: "6143", isKit: false, isMulti: false},
     {label: "Teleste 85MHz", id: "6144", isKit: false, isMulti: false},
     {label: "WO 85MHz", id: "6147", isKit: false, isMulti: false},
-    {label: "LL 85MHz", id: "6480", isKit: false, isMulti: false},
+    {label: "LL 85MHz", id: "6380", isKit: false, isMulti: false},
     {label: "Micronode", id: "5049", isKit: false, isMulti: false},
 ]
 const coaxSTBs = [

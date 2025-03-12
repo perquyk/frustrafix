@@ -1,34 +1,48 @@
 //Script with functions used inside task.
 //check if page loaded is a opened taks. if so, execute, else do nothing
-if(document.title === "WC: Perform"){
-    //start with removing unneeded shells buttons and stuff, small loop in case of slower loading.
-    for(let i = 0; i < 5; i++){
-        setTimeout(() => {removeShells()},1500)
+chrome.storage.sync.get("performNavBar", (data) => {
+    if (data.performNavBar) {
+        SFXFunction()
     }
-    //edit existing buttons to make them take less space
-    editStdButtons();
-    //add Custom buttons to navbar top
-    addCustomButtons();
-}
+})
+function SFXFunction() {
+    if (document.title === "WC: Perform") {
+        //start with removing unneeded shells buttons and stuff, small loop in case of slower loading.
+        for (let i = 0; i < 5; i++) {
+            setTimeout(() => {
+                removeShells()
+            }, 1500)
+        }
+        //edit existing buttons to make them take less space
+        editStdButtons();
+        //add Custom buttons to navbar top
+        addCustomButtons();
+    }
 
-    function removeShells(){
+    function removeShells() {
         const shAntsButton = document.getElementById("sh_btn_header_ants")
         const shSpotButton = document.getElementById("sh_btn_header_spot")
         let shWhiteDiv;
-        if(shSpotButton){shWhiteDiv = shSpotButton.parentNode.previousSibling;}
+        if (shSpotButton) {
+            shWhiteDiv = shSpotButton.parentNode.previousSibling;
+        }
         const shTimer = document.querySelectorAll("#timer");
-        if (shWhiteDiv){
+        if (shWhiteDiv) {
             shWhiteDiv.remove();
         }
-        if (shAntsButton){
+        if (shAntsButton) {
             shAntsButton.parentNode.remove()
         }
-        if (shSpotButton){
-            shSpotButton.parentNode.remove()}
-        if(shTimer){
-            shTimer.forEach((item) => {item.remove()})
+        if (shSpotButton) {
+            shSpotButton.parentNode.remove()
+        }
+        if (shTimer) {
+            shTimer.forEach((item) => {
+                item.remove()
+            })
         }
     }
+
     function editStdButtons() {
         const saveBtn = document.getElementById("save-in-between");
         const pmBtn = document.getElementById("go-to-probleemmelder");
@@ -39,7 +53,8 @@ if(document.title === "WC: Perform"){
         impersonateBtn.textContent = "MyTLN";
         impersonateBtn.className = "btn btn-warning"
     }
-    function addCustomButtons(){
+
+    function addCustomButtons() {
         const antsURL = "http://ants.inet.telenet.be/tools/modems/modemtest#modem=";
         const spotURL = "https://spot.prd.apps.telenet.be/care/customer/";
         const nodeURL = "https://spot.prd.apps.telenet.be/care/network/";
@@ -85,20 +100,23 @@ if(document.title === "WC: Perform"){
         document.getElementById("spot-node").addEventListener("click", openNodeCare);
 
         //event functions
-        function copyCx(){
+        function copyCx() {
             navigator.clipboard.writeText(getCustomerNumber());
             return null
         }
-        function openAnts(){
+
+        function openAnts() {
             window.open(antsURL + getCustomerNumber(), "_blank");
             return null
         }
-        function openSpot(){
+
+        function openSpot() {
             window.open(spotURL + getCustomerNumber(), "_blank");
             return null
         }
-        function copyNode(){
-            if(getNode() === ""){
+
+        function copyNode() {
+            if (getNode() === "") {
                 document.getElementById("nodeBtn").textContent = "Node not found"
             } else {
                 navigator.clipboard.writeText(getNode());
@@ -106,30 +124,34 @@ if(document.title === "WC: Perform"){
             }
             return null
         }
-        function openStreetping(){
+
+        function openStreetping() {
             window.open(streetURL + getNode(), "_blank");
             return null
         }
-        function openNodeCare(){
+
+        function openNodeCare() {
             window.open(nodeURL + getNode(), "_blank");
             return null
         }
 
         //functions to get task info for buttons
-        function getCustomerNumber(){
+        function getCustomerNumber() {
             const portlet = document.querySelector(".portlet-body.clearfix.cust-details-portlet-body");
             const portletRows = portlet.querySelectorAll("tr");
             return portletRows[0].querySelector("td").textContent.trim()
         }
+
         function getNode() {
             let node = document.querySelector("#node");
-            if(node === null ) {
+            if (node === null) {
                 return "";
             } else {
                 return node.textContent;
             }
 
         }
+
         //functions for adding buttons in a standardized look
         function navbarPrimaryButton(btnName, label) {
             const buttonDiv = document.createElement("div");
@@ -142,15 +164,17 @@ if(document.title === "WC: Perform"){
             btn.textContent = label
             return buttonDiv;
         }
+
         function navBarSecondaryButton(btnName, label) {
-        const buttonDiv = document.createElement("div");
-        buttonDiv.style.float = "left";
-        const btn = document.createElement("button");
-        btn.id = btnName;
-        buttonDiv.appendChild(btn);
-        btn.type = "button";
-        btn.className = "btn dark navbarButton secondary";
-        btn.textContent = label
-        return buttonDiv;
+            const buttonDiv = document.createElement("div");
+            buttonDiv.style.float = "left";
+            const btn = document.createElement("button");
+            btn.id = btnName;
+            buttonDiv.appendChild(btn);
+            btn.type = "button";
+            btn.className = "btn dark navbarButton secondary";
+            btn.textContent = label
+            return buttonDiv;
+        }
     }
 }

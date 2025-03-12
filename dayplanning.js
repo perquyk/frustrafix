@@ -2,38 +2,46 @@ let page = window.location.href;
 if(page == "https://smartfix.unit-t.eu/interventions?" || page == "https://smartfix.unit-t.eu/interventions"){
     //script waits 5 seconds, then runs all this code
     setTimeout(() => {
-        //add buttons to navbar in dayplanning to go to entity viewer and stock overview
-        const header = document.querySelector("#kt_header_menu");
-        const navbar = header.querySelector(".menu-nav");
 
-        //stockbutton
-        const stockli = document.createElement("li")
-        stockli.className = "menu-item"
-        const stockBtn = document.createElement("btn");
-        stockli.appendChild(stockBtn);
-        stockBtn.textContent = "Warehouse Overview"
-        stockBtn.className= "btn-primary btn"
-
-        //entity viewer button
-        const entityViewerli = document.createElement("li")
-        entityViewerli.className = "menu-item"
-        const entityViewerBtn = document.createElement("btn");
-        entityViewerli.appendChild(entityViewerBtn);
-        entityViewerBtn.textContent = "Entity Viewer"
-        entityViewerBtn.className= "btn-primary btn"
-
-
-        navbar.appendChild(stockli);
-        navbar.appendChild(entityViewerli);
-
-        stockBtn.addEventListener("click", function(){
-            window.open("https://webclient.unit-t.eu/warehouses/overview/?sopReferrer=interventions&sopLang=en_US", "_blank")
-        })
-        entityViewerli.addEventListener("click", function(){
-            window.open("https://smartfix.unit-t.eu/tasks?", "_blank")
+        chrome.storage.sync.get(['navbuttons', 'businesstech'], (data) => {
+            if (data.navbuttons) {
+                stockbtn();
+                if(data.businesstech) {
+                    entityVBtn();
+                }
+            }
         })
 
-        console.log(navbar);
+        function stockbtn(){
+            const header = document.querySelector("#kt_header_menu");
+            const navbar = header.querySelector(".menu-nav");
+            const stockli = document.createElement("li")
+            stockli.className = "menu-item"
+            const stockBtn = document.createElement("btn");
+            stockli.appendChild(stockBtn);
+            stockBtn.textContent = "Warehouse Overview"
+            stockBtn.className= "btn-primary btn"
+
+            navbar.appendChild(stockli);
+
+            stockBtn.addEventListener("click", function(){
+                window.open("https://webclient.unit-t.eu/warehouses/overview/?sopReferrer=interventions&sopLang=en_US", "_blank")
+            })
+        }
+        function entityVBtn(){
+            const header = document.querySelector("#kt_header_menu");
+            const navbar = header.querySelector(".menu-nav");
+            const entityViewerli = document.createElement("li")
+            entityViewerli.className = "menu-item"
+            const entityViewerBtn = document.createElement("btn");
+            entityViewerli.appendChild(entityViewerBtn);
+            entityViewerBtn.textContent = "Entity Viewer"
+            entityViewerBtn.className= "btn-primary btn"
+            navbar.appendChild(entityViewerli);
+            entityViewerli.addEventListener("click", function(){
+                window.open("https://smartfix.unit-t.eu/tasks?", "_blank")
+            })
+        }
     },500)
     setTimeout(() => {
         //selecting ul where 4 buttons are located

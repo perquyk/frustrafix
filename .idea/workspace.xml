@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbb9646e-905c-41ad-a749-598292960a87" name="Changes" comment="made a script that replaces the terms in todo portlet&#10;&#10;right now only vpmulti and p2go are affected.">
+    <list default="true" id="cbb9646e-905c-41ad-a749-598292960a87" name="Changes" comment="small loop for shells buttons to be sure they dissapear even after delay of max 7.5 secs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SFX.js" beforeDir="false" afterPath="$PROJECT_DIR$/SFX.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/background.js" beforeDir="false" afterPath="$PROJECT_DIR$/background.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dayplanning.js" beforeDir="false" afterPath="$PROJECT_DIR$/dayplanning.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/matbtn.js" beforeDir="false" afterPath="$PROJECT_DIR$/matbtn.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/options.html" beforeDir="false" afterPath="$PROJECT_DIR$/options.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/options.js" beforeDir="false" afterPath="$PROJECT_DIR$/options.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vpMulti.js" beforeDir="false" afterPath="$PROJECT_DIR$/vpMulti.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="add-base" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -33,9 +40,6 @@
     &quot;accountId&quot;: &quot;6201982b-4d96-432f-8079-1715a5448a08&quot;
   }
 }</component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 6
@@ -115,12 +119,46 @@
       <workItem from="1739989010807" duration="2000" />
       <workItem from="1740342170466" duration="1775000" />
       <workItem from="1740344551994" duration="3449000" />
-      <workItem from="1740469899626" duration="235000" />
-      <workItem from="1740517713145" duration="355000" />
-      <workItem from="1740518252401" duration="19000" />
-      <workItem from="1740563043238" duration="400000" />
-      <workItem from="1740980219481" duration="6000" />
-      <workItem from="1741771873959" duration="3076000" />
+    </task>
+    <task id="LOCAL-00001" summary="adjusted query select number">
+      <option name="closed" value="true" />
+      <created>1734948702809</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1734948702810</updated>
+    </task>
+    <task id="LOCAL-00002" summary="version number change">
+      <option name="closed" value="true" />
+      <created>1734948840094</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1734948840094</updated>
+    </task>
+    <task id="LOCAL-00003" summary="bugfix with old history list">
+      <option name="closed" value="true" />
+      <created>1737201899598</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1737201899598</updated>
+    </task>
+    <task id="LOCAL-00004" summary="changed version number">
+      <option name="closed" value="true" />
+      <created>1737201908924</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1737201908924</updated>
+    </task>
+    <task id="LOCAL-00005" summary="changed version number">
+      <option name="closed" value="true" />
+      <created>1737244368255</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1737244368255</updated>
     </task>
     <task id="LOCAL-00006" summary="added unmanaged vdsl to shortcuts">
       <option name="closed" value="true" />
@@ -418,103 +456,7 @@
       <option name="project" value="LOCAL" />
       <updated>1739653726655</updated>
     </task>
-    <task id="LOCAL-00043" summary="update version number">
-      <option name="closed" value="true" />
-      <created>1740425312859</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1740425312859</updated>
-    </task>
-    <task id="LOCAL-00044" summary="Added IDs for inhome material buttons">
-      <option name="closed" value="true" />
-      <created>1740425375275</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1740425375275</updated>
-    </task>
-    <task id="LOCAL-00045" summary="Refactored materialbtns to new file. this still has to be tested!">
-      <option name="closed" value="true" />
-      <created>1740434229076</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1740434229076</updated>
-    </task>
-    <task id="LOCAL-00046" summary="version number changed">
-      <option name="closed" value="true" />
-      <created>1740434240905</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1740434240905</updated>
-    </task>
-    <task id="LOCAL-00047" summary="Not needed anymore">
-      <option name="closed" value="true" />
-      <created>1740434260540</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1740434260540</updated>
-    </task>
-    <task id="LOCAL-00048" summary="Added id's to items">
-      <option name="closed" value="true" />
-      <created>1740470113704</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1740470113704</updated>
-    </task>
-    <task id="LOCAL-00049" summary="changed version number">
-      <option name="closed" value="true" />
-      <created>1740517800746</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1740517800746</updated>
-    </task>
-    <task id="LOCAL-00050" summary="layout change of script">
-      <option name="closed" value="true" />
-      <created>1740517976515</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1740517976515</updated>
-    </task>
-    <task id="LOCAL-00051" summary="changed version number">
-      <option name="closed" value="true" />
-      <created>1740765766265</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1740765766265</updated>
-    </task>
-    <task id="LOCAL-00052" summary="Made small changes to settings and matbtns for niu-handling">
-      <option name="closed" value="true" />
-      <created>1740770642295</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1740770642295</updated>
-    </task>
-    <task id="LOCAL-00053" summary="removed redundant console.log">
-      <option name="closed" value="true" />
-      <created>1740819262860</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1740819262860</updated>
-    </task>
-    <task id="LOCAL-00054" summary="made a script that replaces the terms in todo portlet&#10;&#10;right now only vpmulti and p2go are affected.">
-      <option name="closed" value="true" />
-      <created>1740819312705</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1740819312705</updated>
-    </task>
-    <option name="localTasksCounter" value="55" />
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -532,6 +474,16 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="removed all mentions of soskenny" />
+    <MESSAGE value="added icon to sfx home.js" />
+    <MESSAGE value="prepend home buttons instead of appending" />
+    <MESSAGE value="added cafe and sf buttons to dayplanning" />
+    <MESSAGE value="added testing for materialbtns" />
+    <MESSAGE value="added value IDs for products" />
+    <MESSAGE value="removed .click() and added dispatchevent instead." />
+    <MESSAGE value="changed version" />
+    <MESSAGE value="''" />
+    <MESSAGE value="fixed the kit-bug. hotfix 3.3.4" />
     <MESSAGE value="updated version number" />
     <MESSAGE value="updated bug disclaimer for materialbuttons" />
     <MESSAGE value="added entity viewer and stock button to dayplanning" />
@@ -541,22 +493,12 @@
     <MESSAGE value="Added WF labeling" />
     <MESSAGE value="Attempt to fix first item bug" />
     <MESSAGE value="removed comments that were for testing purposes." />
+    <MESSAGE value="changed version number" />
     <MESSAGE value="Added Beta to appname" />
     <MESSAGE value="Removed Beta" />
     <MESSAGE value="added bugfix for first-item bug" />
     <MESSAGE value="version number" />
     <MESSAGE value="small loop for shells buttons to be sure they dissapear even after delay of max 7.5 secs" />
-    <MESSAGE value="update version number" />
-    <MESSAGE value="Added IDs for inhome material buttons" />
-    <MESSAGE value="Refactored materialbtns to new file. this still has to be tested!" />
-    <MESSAGE value="version number changed" />
-    <MESSAGE value="Not needed anymore" />
-    <MESSAGE value="Added id's to items" />
-    <MESSAGE value="layout change of script" />
-    <MESSAGE value="changed version number" />
-    <MESSAGE value="Made small changes to settings and matbtns for niu-handling" />
-    <MESSAGE value="removed redundant console.log" />
-    <MESSAGE value="made a script that replaces the terms in todo portlet&#10;&#10;right now only vpmulti and p2go are affected." />
-    <option name="LAST_COMMIT_MESSAGE" value="made a script that replaces the terms in todo portlet&#10;&#10;right now only vpmulti and p2go are affected." />
+    <option name="LAST_COMMIT_MESSAGE" value="small loop for shells buttons to be sure they dissapear even after delay of max 7.5 secs" />
   </component>
 </project>

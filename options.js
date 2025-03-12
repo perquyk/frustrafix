@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Load stored settings
-    chrome.storage.sync.get(['antscopy', 'favicon', 'businesstech','navbuttons', 'dayplanningbtns', 'performNavBar', 'matbtn','todo', 'feature2'], (data) => {
+    chrome.storage.sync.get(['antscopy', 'favicon', 'businesstech','navbuttons', 'dayplanningbtns', 'performNavBar', 'matbtn','todo'], (data) => {
       if (chrome.runtime.lastError) {
         console.error("Error retrieving settings:", chrome.runtime.lastError);
       }
@@ -15,8 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('matbtn').checked = data.matbtn;
         document.getElementById('todo').checked = data.todo;
 
-
-        document.getElementById('feature2').checked = data.feature2;
       }
     });
   
@@ -25,14 +23,18 @@ document.addEventListener('DOMContentLoaded', () => {
       const antscopy = document.getElementById('antscopy').checked;
       const favicon = document.getElementById('favicon').checked;
       const businesstech = document.getElementById('businesstech').checked;
+      const navbuttons = document.getElementById('navbuttons').checked;
+      const dayplanningbtns = document.getElementById('dayplanningbtns').checked;
+      const performNavBar = document.getElementById('performNavBar').checked;
+      const matbtn = document.getElementById('matbtn').checked;
+      const todo = document.getElementById('todo').checked;
 
-      const feature2 = document.getElementById('feature2').checked;
   
-      chrome.storage.sync.set({ antscopy, favicon, businesstech, feature2 }, () => {
+      chrome.storage.sync.set({ antscopy, favicon, businesstech, navbuttons, dayplanningbtns, performNavBar, matbtn, todo }, () => {
         if (chrome.runtime.lastError) {
           console.error("Error saving settings:", chrome.runtime.lastError);
         } else {
-          console.log("Settings saved:", { antscopy, favicon, businesstech, feature2 });  // Debugging line
+          console.log("Settings saved:", { antscopy, favicon, businesstech, navbuttons, dayplanningbtns, performNavBar, matbtn });  // Debugging line
 
         }
       });

@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbb9646e-905c-41ad-a749-598292960a87" name="Changes" comment="changed version number">
+    <list default="true" id="cbb9646e-905c-41ad-a749-598292960a87" name="Changes" comment="made a script that replaces the terms in todo portlet&#10;&#10;right now only vpmulti and p2go are affected.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matbtn.js" beforeDir="false" afterPath="$PROJECT_DIR$/matbtn.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/options.html" beforeDir="false" afterPath="$PROJECT_DIR$/options.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/options.js" beforeDir="false" afterPath="$PROJECT_DIR$/options.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +33,9 @@
     &quot;accountId&quot;: &quot;6201982b-4d96-432f-8079-1715a5448a08&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 6
@@ -52,7 +53,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "option-v2",
     "last_opened_file_path": "C:/Users/perqu/Documents/GitHub/frustrafix",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -118,30 +119,8 @@
       <workItem from="1740517713145" duration="355000" />
       <workItem from="1740518252401" duration="19000" />
       <workItem from="1740563043238" duration="400000" />
-    </task>
-    <task id="LOCAL-00003" summary="bugfix with old history list">
-      <option name="closed" value="true" />
-      <created>1737201899598</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1737201899598</updated>
-    </task>
-    <task id="LOCAL-00004" summary="changed version number">
-      <option name="closed" value="true" />
-      <created>1737201908924</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1737201908924</updated>
-    </task>
-    <task id="LOCAL-00005" summary="changed version number">
-      <option name="closed" value="true" />
-      <created>1737244368255</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1737244368255</updated>
+      <workItem from="1740980219481" duration="6000" />
+      <workItem from="1741771873959" duration="3076000" />
     </task>
     <task id="LOCAL-00006" summary="added unmanaged vdsl to shortcuts">
       <option name="closed" value="true" />
@@ -511,7 +490,31 @@
       <option name="project" value="LOCAL" />
       <updated>1740765766265</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Made small changes to settings and matbtns for niu-handling">
+      <option name="closed" value="true" />
+      <created>1740770642295</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1740770642295</updated>
+    </task>
+    <task id="LOCAL-00053" summary="removed redundant console.log">
+      <option name="closed" value="true" />
+      <created>1740819262860</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1740819262860</updated>
+    </task>
+    <task id="LOCAL-00054" summary="made a script that replaces the terms in todo portlet&#10;&#10;right now only vpmulti and p2go are affected.">
+      <option name="closed" value="true" />
+      <created>1740819312705</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1740819312705</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -529,9 +532,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changed version" />
-    <MESSAGE value="''" />
-    <MESSAGE value="fixed the kit-bug. hotfix 3.3.4" />
     <MESSAGE value="updated version number" />
     <MESSAGE value="updated bug disclaimer for materialbuttons" />
     <MESSAGE value="added entity viewer and stock button to dayplanning" />
@@ -554,6 +554,9 @@
     <MESSAGE value="Added id's to items" />
     <MESSAGE value="layout change of script" />
     <MESSAGE value="changed version number" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed version number" />
+    <MESSAGE value="Made small changes to settings and matbtns for niu-handling" />
+    <MESSAGE value="removed redundant console.log" />
+    <MESSAGE value="made a script that replaces the terms in todo portlet&#10;&#10;right now only vpmulti and p2go are affected." />
+    <option name="LAST_COMMIT_MESSAGE" value="made a script that replaces the terms in todo portlet&#10;&#10;right now only vpmulti and p2go are affected." />
   </component>
 </project>

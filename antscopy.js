@@ -20,6 +20,7 @@ if (
     function modemtestLoaded() {
       boxCheck();
       emptyCheck();
+      return null;
     }
     //starts modemtest automatically when modeminput has something filled in.
     function emptyCheck() {
@@ -30,6 +31,7 @@ if (
         document.getElementById("start-test").click();
       }
     }
+
     //checks all boxes on pageload
     function boxCheck() {
       const options = document.getElementById("options");
@@ -43,11 +45,8 @@ if (
       })
     }
     //set trigger location for copy button
-    var h1 = document.querySelector("h1");
-    const copyBtn = document.getElementById("copy-helper");
-    h1.addEventListener("click", copyhttp);
-
-
+    const h1 = document.querySelector("h1");
+    h1.addEventListener("click", copyhttp)
 
     function copyhttp() {
       const textArea = document.createElement("textarea");
@@ -65,12 +64,14 @@ if (
       copyFeedback();
     }
     function copyFeedback() {
-      var h1 = document.querySelector("h1");
-      var feedback = document.createElement("h2");
-      feedback.style.color = "red";
-      feedback.innerText = "🐜📋";
+      const h1 = document.querySelector("h1");
+      const feedback = document.createElement("h2");
+      feedback.innerText = "🐜📋"
+      //feedback.innerText = "🐜📋";
       h1.appendChild(feedback);
-      sleep(1000).then(() => feedback.remove());
+      sleep(1000).then(() => {
+        feedback.remove();
+      });
     }
     function sleep(ms) {
       return new Promise((resolve) => setTimeout(resolve, ms));
@@ -214,39 +215,16 @@ if (
           return output;
         }
       }
-      function getipv4wan() {
-        var vlan = vlanChecker();
-        console.log("vlan modem? : " + vlanChecker());
-        if (vlan == true) {
-          var ipv4wan = "";
-        } else {
-          var ipv4wan = hgwTab.querySelectorAll("td")[1].innerText;
-        }
-        return ipv4wan;
+      function getipv4wan(){
+        return !hgwTab ? "undefined" : hgwTab.querySelectorAll("td")[1].innerText;
       }
       function getipv6wan() {
-        var vlan = vlanChecker();
-        if (vlan == true) {
-          var ipv6wan = "";
-        } else {
-          var ipv6wan = hgwTab.querySelectorAll("td")[3].innerText;
-        }
-        return ipv6wan;
+        return !hgwTab ? "undefined" : hgwTab.querySelectorAll("td")[3].innerText;
+      }
+      function getProduct(){
+        return configTab.querySelectorAll("td")[11].innerText;
       }
 
-      function vlanChecker() {
-        let vlan = 0;
-        const array = document
-          .querySelector("#tab-status")
-          .querySelectorAll("tr");
-        array.forEach((item) => {
-          let text = item.querySelector("th").innerText;
-          if (text === "VLAN") {
-            vlan++;
-          }
-        });
-        return vlan > 0;
-      }
 
 
 
@@ -268,13 +246,15 @@ if (
         TX: getTX(),
         ussnr: getussnr(),
         ofdmaPower: getOfdmaPower(),
+        product: getProduct(),
       };
 
-      var outputText = `INFO
+      return `INFO
 ===========
 Mac-address: ${testData.mac} ( ${testData.model} )
 Node: ${testData.node}
 CMTS: ${testData.cmts}
+Product: ${testData.product}
 Software: ${testData.software}
 WAN IPv4(private): ${testData.ipv4lan}
 WAN IPv4(public): ${testData.ipv4wan}
@@ -299,7 +279,6 @@ SNR: ${testData.ussnr}
 OFDMA:
 Power: ${testData.ofdmaPower}
         `;
-      return outputText;
     }
   }
 }

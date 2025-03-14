@@ -59,7 +59,7 @@
 
     {
       "matches": ["http://ants.inet.telenet.be/tools/modems/modemtest*"],
-      "js": ["plugins/ants/antscopy.js"]
+      "js": ["plugins/ants/starttest.js", "plugins/ants/copy.js"]
     }
   ]
 }

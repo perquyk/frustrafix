@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "FrustraFix BETA",
-  "version": "4.0.0.0",
+  "version": "4.1.0.0",
 
   "options_page": "options/options.html",
   "permissions": ["storage"],
@@ -28,7 +28,7 @@
         "https://smartfix.unit-t.eu/*"
       ],
       "js": ["plugins/sfx/favicon.js"],
-      "css": ["plugins/frustrafix.css"]
+      "css": ["frustrafix.css"]
     },
     {
       "matches": [
@@ -56,7 +56,11 @@
       "matches": ["https://smartfix.unit-t.eu/interventions*"],
       "js": ["plugins/sfx/dayplanning.js"]
     },
-
+    {
+      "matches": ["http://ants.inet.telenet.be/*"],
+      "js": ["plugins/ants/shortcuts.js"],
+      "css": ["plugins/ants/ants.css"]
+    },
     {
       "matches": ["http://ants.inet.telenet.be/tools/modems/modemtest*"],
       "js": ["plugins/ants/starttest.js", "plugins/ants/copy.js"]

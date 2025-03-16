@@ -4,6 +4,7 @@ chrome.runtime.onInstalled.addListener(() => {
     [
       "antscopy",
       "autostartants",
+      "antsShortcut",
       "favicon",
       "businesstech",
       "navbuttons",
@@ -21,6 +22,9 @@ chrome.runtime.onInstalled.addListener(() => {
       }
       if (data.autostartants == undefined) {
         chrome.storage.sync.set({ autostartants: true });
+      }
+      if (data.antsShortcut == undefined) {
+        chrome.storage.sync.set({ antsShortcut: true });
       }
       if (data.favicon == undefined) {
         chrome.storage.sync.set({ favicon: true });

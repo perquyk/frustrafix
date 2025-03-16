@@ -1,86 +1,186 @@
 <!DOCTYPE html>
 <html lang="en-us">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Frustrafix - Options</title>
-        <!--Bootstrap CSS-->
-        <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
-        <!--Bootstrap Icons-->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    </head>
-    <body data-bs-theme="dark">
-        <!--top navbar-->
-        <nav class="navbar bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="icon/48x48.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
-                      Frustrafix Options
-                </a>
-            </div>
-        </nav>
-        <div class="container-md mt-4 p-3 border bg-body-tertiary rounded">
-            <h2 style="font-size: 24px;">General Options</h2>
-            <hr/>
-            <!-- B2B switch -->
-            <div class="form-check form-switch" style="margin-bottom: 10px;">
-                <input class="form-check-input" type="checkbox" role="switch" id="businesstech">
-                <label class="form-check-label" for="businesstech">- Enable B2B-functions - This will affect which type of NIU you'll see and change some buttons and functionality more suited to B2B technicians</label>
-            </div>
-        </div>
-        <div class="container-md mt-4 p-3 border bg-body-tertiary rounded">
-            <h2 style="font-size: 24px;">Smartfix Options</h2>
-            <hr/>
-            <!-- favicon -->
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="favicon">
-                <label class="form-check-label" for="favicon">- Change Icon of Smartfix to different design.</label>
-            </div>
-            <!-- navigation buttons -->
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="navbuttons">
-                <label class="form-check-label" for="navbuttons">- Add some useful navigation buttons to Smartfix pages</label>
-            </div>
-            <!-- add spot/ants button to dayplanning -->
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="dayplanningbtns">
-                <label class="form-check-label" for="dayplanningbtns">- Add Spot & Ants button to dayplanning screen</label>
-            </div>
-            <!-- add top nav buttons -->
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="performNavBar">
-                <label class="form-check-label" for="performNavBar">- Add buttons to top of workorder screen - Spot, ants for Customer + node</label>
-            </div>
-            <!-- Material buttons -->
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="matbtn">
-                <label class="form-check-label" for="matbtn">- Add Material buttons to material portlet</label>
-            </div>
-            <!-- to do portlet translation-->
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="todo">
-                <label class="form-check-label" for="todo">- Translate "product to be installed" portlet things - example: voice pro multi/phone 2 go</label>
-            </div>
-        </div>
-        <div class="container-md mt-4 p-3 border bg-body-tertiary rounded">
-            <h2 style="font-size: 24px;">Ants Options</h2>
-            <hr/>
-            <!-- enable/disable copy function -->
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="antscopy">
-                <label class="form-check-label" for="antscopy">- Copy short modemtest result by clicking "modem test" title in modemtest - <strong style="color: darkorange">Disable if using other extension for this functionality!</strong></label>
-            </div>
-        </div>
-        <div class="container-md mt-4 p-3 border bg-body-tertiary rounded">
-            <h2 style="font-size: 24px;">Popup Options</h2>
-            <hr/>
-            <p>Coming soon...</p>
-        </div>
-        <div class="container-md mt-4 p-3 border bg-body-tertiary rounded">
-            <button id="save" class="btn btn-success" style="width: 100%"><i class="bi bi-floppy"></i> Save Options</button>
-        </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Frustrafix - Options</title>
+    <!--Bootstrap CSS-->
+    <link href="/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <!--Bootstrap Icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body data-bs-theme="dark">
+    <!--top navbar-->
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="../icon/48x48.png"
+            alt="Logo"
+            width="30"
+            height="30"
+            class="d-inline-block align-text-top"
+          />
+            Frustrafix Options
+        </a>
+      </div>
+    </nav>
+    <div class="container-md mt-4 p-3 border bg-body-tertiary rounded">
+      <h2 style="font-size: 24px">General Options</h2>
+      <hr />
+      <!-- B2B switch -->
+      <div class="form-check form-switch" style="margin-bottom: 10px">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          role="switch"
+          id="businesstech"
+        />
+        <label class="form-check-label" for="businesstech"
+          >- Enable B2B-functions - This will affect which type of NIU you'll
+          see and change some buttons and functionality more suited to B2B
+          technicians</label
+        >
+      </div>
+    </div>
+    <div class="container-md mt-4 p-3 border bg-body-tertiary rounded">
+      <h2 style="font-size: 24px">Smartfix Options</h2>
+      <hr />
+      <!-- favicon -->
+      <div class="form-check form-switch">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          role="switch"
+          id="favicon"
+        />
+        <label class="form-check-label" for="favicon"
+          >- Change Icon of Smartfix to different design.</label
+        >
+      </div>
+      <!-- navigation buttons -->
+      <div class="form-check form-switch">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          role="switch"
+          id="navbuttons"
+        />
+        <label class="form-check-label" for="navbuttons"
+          >- Add some useful navigation buttons to Smartfix pages</label
+        >
+      </div>
+      <!-- add spot/ants button to dayplanning -->
+      <div class="form-check form-switch">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          role="switch"
+          id="dayplanningbtns"
+        />
+        <label class="form-check-label" for="dayplanningbtns"
+          >- Add Spot & Ants button to dayplanning screen</label
+        >
+      </div>
+      <!-- add top nav buttons -->
+      <div class="form-check form-switch">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          role="switch"
+          id="performNavBar"
+        />
+        <label class="form-check-label" for="performNavBar"
+          >- Add buttons to top of workorder screen - Spot, ants for Customer +
+          node</label
+        >
+      </div>
+      <!-- Material buttons -->
+      <div class="form-check form-switch">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          role="switch"
+          id="matbtn"
+        />
+        <label class="form-check-label" for="matbtn"
+          >- Add Material buttons to material portlet</label
+        >
+      </div>
+      <!-- to do portlet translation-->
+      <div class="form-check form-switch">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          role="switch"
+          id="todo"
+        />
+        <label class="form-check-label" for="todo"
+          >- Translate "product to be installed" portlet things - example: voice
+          pro multi/phone 2 go</label
+        >
+      </div>
+    </div>
+    <div class="container-md mt-4 p-3 border bg-body-tertiary rounded">
+      <h2 style="font-size: 24px">Ants Options</h2>
+      <hr />
+      <!-- Shortcut buttons on top navbar of ants-->
+      <div class="form-check form-switch">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          role="switch"
+          id="antsShortcut"
+        />
+        <label class="form-check-label" for="autostartants"
+          >- Add some shortcut buttons to top of Ants</label
+        >
+      </div>
+      <!-- enable/disable autostart of modemtest -->
+      <div class="form-check form-switch">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          role="switch"
+          id="autostartants"
+        />
+        <label class="form-check-label" for="autostartants"
+          >- Automatically start modem test when opening direct links with
+          filled in HFC</label
+        >
+      </div>
+      <!-- enable/disable copy function -->
+      <div class="form-check form-switch">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          role="switch"
+          id="antscopy"
+        />
+        <label class="form-check-label" for="antscopy"
+          >- Copy short modemtest result by clicking "modem test" title in
+          modemtest -
+          <strong style="color: darkorange"
+            >Disable if using other extension for this functionality!</strong
+          ></label
+        >
+      </div>
+    </div>
+    <div class="container-md mt-4 p-3 border bg-body-tertiary rounded">
+      <h2 style="font-size: 24px">Popup Options</h2>
+      <hr />
+      <p>Coming soon...</p>
+    </div>
+    <div class="container-md mt-4 p-3 border bg-body-tertiary rounded">
+      <button id="save" class="btn btn-success" style="width: 100%">
+        <i class="bi bi-floppy"></i> Save Options
+      </button>
+    </div>
 
-        <!--<label>
+    <!--<label>
             <input type="checkbox" id="antscopy"> Built-in Antscopy functionality - <strong>disable when using other extension for this functionality!</strong>
         </label>
         <br>
@@ -90,8 +190,8 @@
         <br>
         <button id="save">Save</button>-->
 
-        <script src="options.js"></script>
-        <!--bootstrap script-->
-        <script src="/bootstrap/js/bootstrap.js"></script>
-    </body>
+    <script src="options.js"></script>
+    <!--bootstrap script-->
+    <script src="/bootstrap/js/bootstrap.js"></script>
+  </body>
 </html>

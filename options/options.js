@@ -37,7 +37,13 @@ document.addEventListener('DOMContentLoaded', () => {
           console.log("Settings saved:", { antscopy, favicon, businesstech, navbuttons, dayplanningbtns, performNavBar, matbtn });  // Debugging line
 
         }
+<<<<<<< Updated upstream
       });
     });
+=======
+      }
+    );
+    window.alert("Settings saved!");
+>>>>>>> Stashed changes
   });
   

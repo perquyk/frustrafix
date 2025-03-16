@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     [
       "antscopy",
       "autostartants",
+      "antsShortcut",
       "favicon",
       "businesstech",
       "navbuttons",
@@ -19,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("Loaded settings:", data); // Debugging line
         document.getElementById("antscopy").checked = data.antscopy;
         document.getElementById("autostartants").checked = data.autostartants;
+        document.getElementById("antsShortcut").checked = data.antsShortcut;
         document.getElementById("favicon").checked = data.favicon;
         document.getElementById("businesstech").checked = data.businesstech;
         document.getElementById("navbuttons").checked = data.navbuttons;
@@ -35,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("save").addEventListener("click", () => {
     const antscopy = document.getElementById("antscopy").checked;
     const autostartants = document.getElementById("autostartants").checked;
+    const antsShortcut = document.getElementById("antsShortcut").checked;
     const favicon = document.getElementById("favicon").checked;
     const businesstech = document.getElementById("businesstech").checked;
     const navbuttons = document.getElementById("navbuttons").checked;
@@ -47,6 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
       {
         antscopy,
         autostartants,
+        antsShortcut,
         favicon,
         businesstech,
         navbuttons,
@@ -62,6 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
           console.log("Settings saved:", {
             antscopy,
             autostartants,
+            antsShortcut,
             favicon,
             businesstech,
             navbuttons,

@@ -77,6 +77,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
     );
-    window.alert();
+    window.alert("Settings Saved!");
   });
 });

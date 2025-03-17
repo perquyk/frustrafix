@@ -139,6 +139,18 @@
           >- Add some shortcut buttons to top of Ants</label
         >
       </div>
+      <!-- enable/disable check all checkboxes -->
+      <div class="form-check form-switch">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          role="switch"
+          id="antscheckbox"
+        />
+        <label class="form-check-label" for="antscheckbox"
+          >- Automatically check all boxes in modemtest</label
+        >
+      </div>
       <!-- enable/disable autostart of modemtest -->
       <div class="form-check form-switch">
         <input
@@ -169,6 +181,13 @@
         >
       </div>
     </div>
+    <div class="container-md mt-4 p-3 border bg-body-tertiary rounded">
+      <button id="save" class="btn btn-success" style="width: 100%">
+        <i class="bi bi-floppy"></i>
+        Save Options
+      </button>
+    </div>
+
     <script src="options.js"></script>
     <!--bootstrap script-->
     <script src="/bootstrap/js/bootstrap.js"></script>

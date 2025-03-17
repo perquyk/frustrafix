@@ -4,6 +4,7 @@ chrome.runtime.onInstalled.addListener(() => {
     [
       "antscopy",
       "autostartants",
+      "antscheckbox",
       "antsShortcut",
       "favicon",
       "businesstech",
@@ -25,6 +26,9 @@ chrome.runtime.onInstalled.addListener(() => {
       }
       if (data.antsShortcut == undefined) {
         chrome.storage.sync.set({ antsShortcut: true });
+      }
+      if (data.antscheckbox == undefined) {
+        chrome.storage.sync.set({ antscheckbox: true });
       }
       if (data.favicon == undefined) {
         chrome.storage.sync.set({ favicon: true });
@@ -48,20 +52,6 @@ chrome.runtime.onInstalled.addListener(() => {
       if (data.todo == undefined) {
         chrome.storage.sync.set({ todo: true });
       }
-      //set default disabled to disabled afterwards
-      //  chrome.storage.sync.set({
-      //set to true for default enable, set to false for default disable
-      //antscopy: true,
-      //businesstech: true,
-      //favicon: true,
-      //navbuttons: true,
-      //dayplanningbtns: true,
-      //performNavBar: true,
-      //matbtn: true,
-      //todo: true,
-      //feature2: false  // Default to disabled
-      //});
-      //}
     }
   );
 });

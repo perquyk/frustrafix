@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "antscopy",
       "autostartants",
       "antsShortcut",
+      "antscheckbox",
       "favicon",
       "businesstech",
       "navbuttons",
@@ -21,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("antscopy").checked = data.antscopy;
         document.getElementById("autostartants").checked = data.autostartants;
         document.getElementById("antsShortcut").checked = data.antsShortcut;
+        document.getElementById("antscheckbox").checked = data.antscheckbox;
         document.getElementById("favicon").checked = data.favicon;
         document.getElementById("businesstech").checked = data.businesstech;
         document.getElementById("navbuttons").checked = data.navbuttons;
@@ -38,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const antscopy = document.getElementById("antscopy").checked;
     const autostartants = document.getElementById("autostartants").checked;
     const antsShortcut = document.getElementById("antsShortcut").checked;
+    const antscheckbox = document.getElementById("antscheckbox").checked;
     const favicon = document.getElementById("favicon").checked;
     const businesstech = document.getElementById("businesstech").checked;
     const navbuttons = document.getElementById("navbuttons").checked;
@@ -51,6 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
         antscopy,
         autostartants,
         antsShortcut,
+        antscheckbox,
         favicon,
         businesstech,
         navbuttons,
@@ -67,6 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
             antscopy,
             autostartants,
             antsShortcut,
+            antscheckbox,
             favicon,
             businesstech,
             navbuttons,

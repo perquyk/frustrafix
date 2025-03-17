@@ -1,5 +1,5 @@
 chrome.storage.sync.get("autostartants", (data) => {
-  if (data.antscopy) {
+  if (data.autostartants) {
     setTimeout(() => {
       modemtest();
     }, 1000);

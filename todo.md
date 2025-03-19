@@ -1,2 +1,1 @@
 - nav-buttons: iframe for open alarms possible?
-- antscopy: use dispatch event instead of clicking so loading animation runs instead of "nothing".

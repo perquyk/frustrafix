@@ -1,13 +1,13 @@
-
 chrome.storage.sync.get(["autostartants", "antscheckbox"], (data) => {
   if (data.antscheckbox) {
     setTimeout(() => {
       checkboxes();
     }, 500);
-  if (data.autostartants) {
-    setTimeout(() => {
-      modemtest();
-    }, 1000);
+    if (data.autostartants) {
+      setTimeout(() => {
+        modemtest();
+      }, 1000);
+    }
   }
 });
 

@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "FrustraFix BETA",
-  "version": "4.1.0.3",
+  "version": "4.1.0.4",
 
   "options_page": "options/options.html",
   "permissions": ["storage"],
@@ -33,7 +33,7 @@
     {
       "matches": [
         "https://webclient.unit-t.eu/",
-        "https://webclient.unit-t.eu/pages/home/?sopReferrer=interventions&sopLang=*"
+        "https://webclient.unit-t.eu/pages/home/*"
       ],
       "js": ["plugins/sfx/nav-buttons/webclient.js"]
     },

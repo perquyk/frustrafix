@@ -66,5 +66,5 @@ function addBtn(name, url, icon) {
 }
 
 function getKlantnummer() {
-    return $(".dayplanning-project-name.pr-4 span:first").text().split("_")[1];
+    return $("span.d-flex.flex-item.dayplanning-chip.dayplanning-taskgroup-name.false.badge.bg-none span").text().split("_")[1];
 }

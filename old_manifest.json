@@ -1,0 +1,73 @@
+{
+  "manifest_version": 3,
+  "name": "FrustraFix",
+  "version": "4.1.0.4",
+
+  "options_page": "options/options.html",
+  "permissions": ["storage"],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+
+  "icons": {
+    "16": "icon/16x16.png",
+    "32": "icon/32x32.png",
+    "48": "icon/48x48.png",
+    "128": "icon/128x128.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://*/", "http://*/"],
+      "js": ["jquery/jquery-3.7.1.min.js"]
+    },
+    {
+      "matches": [
+        "https://webclient.unit-t.eu/*",
+        "https://smartfix.unit-t.eu/*"
+      ],
+      "js": ["plugins/sfx/favicon.js"],
+      "css": ["frustrafix.css"]
+    },
+    {
+      "matches": [
+        "https://webclient.unit-t.eu/",
+        "https://webclient.unit-t.eu/pages/home/*"
+      ],
+      "js": ["plugins/sfx/nav-buttons/webclient.js"]
+    },
+    {
+      "matches": [
+        "https://webclient.unit-t.eu/workorders/perform/*",
+        "file://*"
+      ],
+      "js": [
+        "plugins/sfx/materialbuttons.js",
+        "plugins/sfx/workorder.js",
+        "plugins/sfx/todotranslate.js"
+      ]
+    },
+    {
+      "matches": ["https://smartfix.unit-t.eu/"],
+      "js": ["plugins/sfx/nav-buttons/sfx.js"]
+    },
+    {
+      "matches": ["https://smartfix.unit-t.eu/interventions*"],
+      "js": ["plugins/sfx/dayplanning.js"]
+    },
+    {
+      "matches": ["http://ants.inet.telenet.be/*"],
+      "js": ["plugins/ants/shortcuts.js"],
+      "css": ["plugins/ants/ants.css"]
+    },
+    {
+      "matches": ["http://ants.inet.telenet.be/tools/modems/modemtest*"],
+      "js": ["plugins/ants/starttest.js", "plugins/ants/copy.js"]
+    }
+  ]
+}
